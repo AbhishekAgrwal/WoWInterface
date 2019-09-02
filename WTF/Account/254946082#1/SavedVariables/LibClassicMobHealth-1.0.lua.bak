@@ -1,0 +1,14 @@
+
+LibClassicMobHealth10DB = {
+	["revision"] = 1,
+	["pc"] = {
+	},
+	["npc"] = {
+	},
+	["pet"] = {
+	},
+}
+LibClassicMobHealth10Opt = {
+	["prune"] = 1000,
+	["save"] = true,
+}

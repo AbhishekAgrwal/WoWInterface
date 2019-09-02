@@ -1,0 +1,26 @@
+
+SimpleUnitFramesDB = {
+	["profileKeys"] = {
+		["Krombopulos - Noggenfogger"] = "Krombopulos - Noggenfogger",
+	},
+	["global"] = {
+		["overlayfont"] = {
+			["fontsize"] = 11,
+			["fontface"] = "Arial Narrow",
+		},
+	},
+	["profiles"] = {
+		["Krombopulos - Noggenfogger"] = {
+			["player"] = {
+				["rhp"] = "HPcurrent",
+				["mmp"] = "MPcurrent",
+				["rmp"] = "MPnone",
+				["icon"] = false,
+				["mhp"] = "HPcurrent",
+			},
+			["target"] = {
+				["icon"] = false,
+			},
+		},
+	},
+}
