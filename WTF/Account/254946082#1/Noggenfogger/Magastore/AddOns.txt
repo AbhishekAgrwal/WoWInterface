@@ -30,3 +30,5 @@ Doom_CooldownPulse: disabled
 Leatrix_Maps: disabled
 tullaRange: disabled
 tullaRange_Config: disabled
+TinyTooltip: disabled
+TipTac: disabled

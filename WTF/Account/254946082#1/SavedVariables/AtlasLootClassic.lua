@@ -12,7 +12,7 @@ AtlasLootClassicDB = {
 		},
 		["Krombopulos - Noggenfogger"] = {
 			["minimap"] = {
-				["minimapPos"] = 345.618667972041,
+				["minimapPos"] = 345.774036101248,
 			},
 			["GUI"] = {
 				["point"] = {

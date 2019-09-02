@@ -32,5 +32,10 @@ tullaRange: enabled
 tullaRange_Config: enabled
 Leatrix_Maps: enabled
 Doom_CooldownPulse: enabled
-ClassPortraitsFinal: disabled
+ClassPortraitsFinal: enabled
 SimpleUnitFrames: disabled
+TipTac: disabled
+TipTacItemRef: disabled
+TipTacOptions: disabled
+TinyTooltip: enabled
+Leatrix_Plus: enabled

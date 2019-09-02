@@ -87,8 +87,8 @@ WeakAurasSaved = {
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "CENTER",
 					["anchorYOffset"] = 0,
-					["text_fontSize"] = 15,
 					["rotateText"] = "NONE",
+					["text_fontSize"] = 15,
 					["anchorXOffset"] = 0,
 					["text_visible"] = true,
 				}, -- [1]
@@ -111,12 +111,12 @@ WeakAurasSaved = {
 			["frameStrata"] = 1,
 			["glowFrequency"] = 0.25,
 			["width"] = 35,
-			["keepAspectRatio"] = false,
+			["progressPrecision"] = 0,
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 1,
-			["glowLines"] = 8,
-			["progressPrecision"] = 0,
 			["anchorFrameType"] = "SCREEN",
+			["keepAspectRatio"] = false,
+			["glowLines"] = 8,
 			["regionType"] = "icon",
 			["xOffset"] = -179.499908447266,
 			["useglowColor"] = false,
@@ -126,11 +126,11 @@ WeakAurasSaved = {
 			["authorOptions"] = {
 			},
 			["useGlowColor"] = false,
-			["zoom"] = 0,
+			["cooldownTextDisabled"] = true,
 			["auto"] = true,
 			["glowScale"] = 1,
 			["id"] = "snd",
-			["cooldownTextDisabled"] = true,
+			["zoom"] = 0,
 			["alpha"] = 1,
 			["glowYOffset"] = 0,
 			["selfPoint"] = "CENTER",
@@ -240,9 +240,9 @@ WeakAurasSaved = {
 					["text_anchorPoint"] = "CENTER",
 					["anchorYOffset"] = 0,
 					["text_visible"] = true,
-					["text_fontSize"] = 15,
-					["anchorXOffset"] = 0,
 					["rotateText"] = "NONE",
+					["anchorXOffset"] = 0,
+					["text_fontSize"] = 15,
 				}, -- [1]
 			},
 			["height"] = 45,
@@ -261,12 +261,11 @@ WeakAurasSaved = {
 				},
 			},
 			["glowFrequency"] = 0.25,
-			["useglowColor"] = false,
+			["keepAspectRatio"] = false,
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 1,
 			["config"] = {
 			},
-			["selfPoint"] = "CENTER",
 			["actions"] = {
 				["start"] = {
 				},
@@ -277,12 +276,13 @@ WeakAurasSaved = {
 					["do_sound"] = false,
 				},
 			},
-			["regionType"] = "icon",
 			["glowLength"] = 10,
+			["regionType"] = "icon",
+			["useglowColor"] = false,
+			["selfPoint"] = "CENTER",
 			["authorOptions"] = {
 			},
 			["glowLines"] = 8,
-			["keepAspectRatio"] = false,
 			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
 			["zoom"] = 0,
@@ -291,8 +291,8 @@ WeakAurasSaved = {
 			["id"] = "CC",
 			["cooldownTextDisabled"] = true,
 			["alpha"] = 1,
-			["glowYOffset"] = 0,
 			["width"] = 45,
+			["glowYOffset"] = 0,
 			["uid"] = "yy2ziQbRS(n",
 			["inverse"] = false,
 			["xOffset"] = 0.5,
@@ -334,10 +334,10 @@ WeakAurasSaved = {
 						["event"] = "Health",
 						["use_percentpower"] = false,
 						["unevent"] = "auto",
+						["custom"] = "function(a, e, t)\n    local currEnergy = UnitPower(\"player\", 3)\n    local dur = 2\n    if (e == \"UNIT_POWER_FREQUENT\" and currEnergy > (aura_env.lastEnergy or 0))\n    or (e == \"ENERGYTICK\" and t and currEnergy == UnitPowerMax(\"player\", 3))\n    then\n        if not a[\"\"]  then\n            a[\"\"] = {\n                show = true,\n                changed = true,\n                duration = dur,\n                expirationTime = GetTime() + dur,\n                progressType = \"timed\"\n            }\n        else\n            local s = a[\"\"]\n            s.changed = true\n            s.duration = dur\n            s.expirationTime = GetTime() + dur\n            s.show = true\n            C_Timer.After(2, function() WeakAuras.ScanEvents(\"ENERGYTICK\", true) end)\n        end\n    end\n    aura_env.lastEnergy = currEnergy\n    return true\nend",
 						["spellIds"] = {
 						},
 						["events"] = "UNIT_POWER_FREQUENT:player ENERGYTICK",
-						["custom"] = "function(a, e, t)\n    local currEnergy = UnitPower(\"player\", 3)\n    local dur = 2\n    if (e == \"UNIT_POWER_FREQUENT\" and currEnergy > (aura_env.lastEnergy or 0))\n    or (e == \"ENERGYTICK\" and t and currEnergy == UnitPowerMax(\"player\", 3))\n    then\n        if not a[\"\"]  then\n            a[\"\"] = {\n                show = true,\n                changed = true,\n                duration = dur,\n                expirationTime = GetTime() + dur,\n                progressType = \"timed\"\n            }\n        else\n            local s = a[\"\"]\n            s.changed = true\n            s.duration = dur\n            s.expirationTime = GetTime() + dur\n            s.show = true\n            C_Timer.After(2, function() WeakAuras.ScanEvents(\"ENERGYTICK\", true) end)\n        end\n    end\n    aura_env.lastEnergy = currEnergy\n    return true\nend",
 						["check"] = "event",
 						["use_unit"] = true,
 						["buffShowOn"] = "showOnActive",
@@ -404,25 +404,26 @@ WeakAurasSaved = {
 				},
 				["finish"] = {
 					["colorR"] = 1,
-					["type"] = "none",
-					["scaleType"] = "straightScale",
-					["use_scale"] = true,
-					["duration_type"] = "seconds",
 					["scalex"] = 0,
+					["colorA"] = 1,
+					["colorG"] = 1,
+					["type"] = "preset",
+					["scaleType"] = "straightScale",
+					["preset"] = "fade",
 					["alpha"] = 0,
 					["colorB"] = 1,
 					["y"] = 0,
-					["colorA"] = 1,
-					["colorG"] = 1,
 					["x"] = 0,
+					["duration_type"] = "seconds",
+					["use_scale"] = true,
 					["duration"] = "0.1",
 					["rotate"] = 0,
-					["scaley"] = 1,
 					["scaleFunc"] = "    function(progress, startX, startY, scaleX, scaleY)\n      return startX + (progress * (scaleX - startX)), startY + (progress * (scaleY - startY))\n    end\n  ",
+					["scaley"] = 1,
 				},
 			},
 			["backdropInFront"] = false,
-			["spark"] = true,
+			["auto"] = true,
 			["barColor"] = {
 				1, -- [1]
 				0, -- [2]
@@ -483,21 +484,21 @@ WeakAurasSaved = {
 			["selfPoint"] = "CENTER",
 			["config"] = {
 			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["zoom"] = 0,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
 			["borderInFront"] = true,
 			["width"] = 127,
-			["sparkDesaturate"] = true,
+			["icon_side"] = "RIGHT",
 			["frameStrata"] = 1,
 			["sparkHeight"] = 25,
 			["texture"] = "Blizzard",
 			["sparkHidden"] = "NEVER",
-			["zoom"] = 0,
-			["auto"] = true,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["spark"] = true,
 			["tocversion"] = 11302,
 			["id"] = "energy tick",
-			["icon_side"] = "RIGHT",
+			["sparkDesaturate"] = true,
 			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
 			["sparkColor"] = {
@@ -532,34 +533,21 @@ WeakAurasSaved = {
 				"energy tick", -- [2]
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["scale"] = 1,
+			["authorOptions"] = {
+			},
 			["xOffset"] = 0,
 			["border"] = false,
-			["yOffset"] = -45.1674499511719,
+			["borderEdge"] = "1 Pixel",
 			["regionType"] = "group",
 			["borderSize"] = 2,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
+			["tocversion"] = 11302,
 			["borderColor"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				1, -- [4]
 			},
-			["authorOptions"] = {
-			},
+			["scale"] = 1,
 			["actions"] = {
 				["start"] = {
 				},
@@ -586,10 +574,23 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["borderEdge"] = "1 Pixel",
-			["borderOffset"] = 4,
+			["yOffset"] = -45.1674499511719,
+			["internalVersion"] = 23,
 			["selfPoint"] = "BOTTOMLEFT",
-			["tocversion"] = 11302,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
 			["id"] = "Energy Bar + Tick",
 			["config"] = {
 			},
@@ -597,7 +598,7 @@ WeakAurasSaved = {
 			["anchorFrameType"] = "SCREEN",
 			["uid"] = "bJ4ejxY68aj",
 			["borderInset"] = 1,
-			["internalVersion"] = 23,
+			["borderOffset"] = 4,
 			["subRegions"] = {
 			},
 			["conditions"] = {
@@ -704,7 +705,7 @@ WeakAurasSaved = {
 					["use_scale"] = true,
 					["colorB"] = 1,
 					["colorG"] = 1,
-					["type"] = "none",
+					["type"] = "preset",
 					["scaleFunc"] = "    function(progress, startX, startY, scaleX, scaleY)\n      return startX + (progress * (scaleX - startX)), startY + (progress * (scaleY - startY))\n    end\n  ",
 					["preset"] = "fade",
 					["alpha"] = 0,
@@ -756,14 +757,14 @@ WeakAurasSaved = {
 					["text_fontType"] = "OUTLINE",
 					["text_anchorPoint"] = "INNER_CENTER",
 					["anchorYOffset"] = 0,
-					["rotateText"] = "NONE",
 					["text_fontSize"] = 10,
+					["rotateText"] = "NONE",
 					["anchorXOffset"] = 0,
 					["text_visible"] = true,
 				}, -- [2]
 				{
+					["border_offset"] = 3,
 					["border_size"] = 14,
-					["type"] = "subborder",
 					["border_anchor"] = "bar",
 					["text_color"] = {
 					},
@@ -775,7 +776,7 @@ WeakAurasSaved = {
 					},
 					["border_visible"] = true,
 					["border_edge"] = "Blizzard Tooltip",
-					["border_offset"] = 3,
+					["type"] = "subborder",
 				}, -- [3]
 			},
 			["height"] = 15,
@@ -807,27 +808,27 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["desaturate"] = false,
-			["config"] = {
-			},
+			["uid"] = "BEIGdMCH8gm",
 			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["smoothProgress"] = true,
 			["useAdjustededMin"] = false,
 			["regionType"] = "aurabar",
 			["borderInFront"] = true,
-			["uid"] = "BEIGdMCH8gm",
+			["config"] = {
+			},
 			["icon_side"] = "RIGHT",
-			["auto"] = true,
+			["spark"] = false,
 			["sparkHeight"] = 30,
 			["texture"] = "Blizzard",
 			["frameStrata"] = 1,
 			["zoom"] = 0,
-			["spark"] = false,
+			["auto"] = true,
 			["tocversion"] = 11302,
-			["id"] = "Energy",
+			["sparkHidden"] = "NEVER",
 			["icon"] = false,
 			["alpha"] = 1,
 			["anchorFrameType"] = "SCREEN",
-			["sparkHidden"] = "NEVER",
+			["id"] = "Energy",
 			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -948,9 +949,9 @@ WeakAurasSaved = {
 						["text_anchorPoint"] = "INNER_CENTER",
 						["anchorYOffset"] = 0,
 						["text_visible"] = true,
-						["rotateText"] = "NONE",
-						["anchorXOffset"] = 0,
 						["text_fontSize"] = 12,
+						["anchorXOffset"] = 0,
+						["rotateText"] = "NONE",
 					}, -- [2]
 					{
 						["text_shadowXOffset"] = 1,
@@ -975,9 +976,9 @@ WeakAurasSaved = {
 						["text_anchorPoint"] = "INNER_RIGHT",
 						["anchorYOffset"] = 0,
 						["text_visible"] = false,
-						["rotateText"] = "NONE",
-						["anchorXOffset"] = 0,
 						["text_fontSize"] = 12,
+						["anchorXOffset"] = 0,
+						["rotateText"] = "NONE",
 					}, -- [3]
 					{
 						["border_size"] = 16,
@@ -1036,33 +1037,33 @@ WeakAurasSaved = {
 				},
 				["xOffset"] = 6.33369445800781,
 				["parent"] = "Energy Bar + Tick 2",
-				["uid"] = "BEIGdMCH8gm",
-				["smoothProgress"] = true,
-				["useAdjustededMin"] = false,
-				["regionType"] = "aurabar",
-				["borderInFront"] = true,
 				["sparkColor"] = {
 					1, -- [1]
 					1, -- [2]
 					1, -- [3]
 					1, -- [4]
 				},
+				["smoothProgress"] = true,
+				["useAdjustededMin"] = false,
+				["regionType"] = "aurabar",
+				["borderInFront"] = true,
+				["config"] = {
+				},
 				["icon_side"] = "RIGHT",
-				["spark"] = false,
+				["auto"] = true,
 				["anchorFrameType"] = "SCREEN",
 				["sparkHeight"] = 30,
 				["texture"] = "Blizzard",
 				["alpha"] = 1,
 				["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-				["auto"] = true,
+				["spark"] = false,
 				["tocversion"] = 11302,
-				["sparkHidden"] = "NEVER",
+				["id"] = "Energy",
 				["zoom"] = 0,
 				["frameStrata"] = 1,
 				["width"] = 182.3,
-				["id"] = "Energy",
-				["config"] = {
-				},
+				["sparkHidden"] = "NEVER",
+				["uid"] = "BEIGdMCH8gm",
 				["inverse"] = false,
 				["sparkOffsetX"] = 0,
 				["orientation"] = "HORIZONTAL",
@@ -1135,7 +1136,18 @@ WeakAurasSaved = {
 				["authorOptions"] = {
 				},
 				["internalVersion"] = 23,
+				["selfPoint"] = "BOTTOMLEFT",
 				["tocversion"] = 11302,
+				["id"] = "Energy Bar + Tick",
+				["borderOffset"] = 4,
+				["frameStrata"] = 1,
+				["anchorFrameType"] = "SCREEN",
+				["uid"] = "bJ4ejxY68aj",
+				["config"] = {
+				},
+				["borderInset"] = 1,
+				["subRegions"] = {
+				},
 				["animation"] = {
 					["start"] = {
 						["duration_type"] = "seconds",
@@ -1150,17 +1162,6 @@ WeakAurasSaved = {
 						["type"] = "none",
 					},
 				},
-				["id"] = "Energy Bar + Tick",
-				["borderOffset"] = 4,
-				["frameStrata"] = 1,
-				["anchorFrameType"] = "SCREEN",
-				["config"] = {
-				},
-				["borderInset"] = 1,
-				["uid"] = "bJ4ejxY68aj",
-				["subRegions"] = {
-				},
-				["selfPoint"] = "BOTTOMLEFT",
 				["conditions"] = {
 				},
 				["load"] = {
@@ -1240,7 +1241,18 @@ WeakAurasSaved = {
 				["authorOptions"] = {
 				},
 				["internalVersion"] = 23,
+				["selfPoint"] = "BOTTOMLEFT",
 				["tocversion"] = 11302,
+				["id"] = "Energy Bar + Tick",
+				["borderOffset"] = 4,
+				["frameStrata"] = 1,
+				["anchorFrameType"] = "SCREEN",
+				["uid"] = "bJ4ejxY68aj",
+				["config"] = {
+				},
+				["borderInset"] = 1,
+				["subRegions"] = {
+				},
 				["animation"] = {
 					["start"] = {
 						["duration_type"] = "seconds",
@@ -1255,17 +1267,6 @@ WeakAurasSaved = {
 						["type"] = "none",
 					},
 				},
-				["id"] = "Energy Bar + Tick",
-				["borderOffset"] = 4,
-				["frameStrata"] = 1,
-				["anchorFrameType"] = "SCREEN",
-				["config"] = {
-				},
-				["borderInset"] = 1,
-				["uid"] = "bJ4ejxY68aj",
-				["subRegions"] = {
-				},
-				["selfPoint"] = "BOTTOMLEFT",
 				["conditions"] = {
 				},
 				["load"] = {
@@ -1310,14 +1311,14 @@ WeakAurasSaved = {
 							["event"] = "Health",
 							["subeventPrefix"] = "SPELL",
 							["unit"] = "player",
+							["custom"] = "function(a, e, t)\n    local currEnergy = UnitPower(\"player\", 3)\n    local dur = 2\n    if (e == \"UNIT_POWER_FREQUENT\" and currEnergy > (aura_env.lastEnergy or 0))\n    or (e == \"ENERGYTICK\" and t and currEnergy == UnitPowerMax(\"player\", 3))\n    then\n        if not a[\"\"]  then\n            a[\"\"] = {\n                show = true,\n                changed = true,\n                duration = dur,\n                expirationTime = GetTime() + dur,\n                progressType = \"timed\"\n            }\n        else\n            local s = a[\"\"]\n            s.changed = true\n            s.duration = dur\n            s.expirationTime = GetTime() + dur\n            s.show = true\n            C_Timer.After(2, function() WeakAuras.ScanEvents(\"ENERGYTICK\", true) end)\n        end\n    end\n    aura_env.lastEnergy = currEnergy\n    return true\nend",
 							["spellIds"] = {
 							},
-							["events"] = "UNIT_POWER_FREQUENT:player ENERGYTICK",
 							["custom_type"] = "stateupdate",
 							["check"] = "event",
 							["names"] = {
 							},
-							["custom"] = "function(a, e, t)\n    local currEnergy = UnitPower(\"player\", 3)\n    local dur = 2\n    if (e == \"UNIT_POWER_FREQUENT\" and currEnergy > (aura_env.lastEnergy or 0))\n    or (e == \"ENERGYTICK\" and t and currEnergy == UnitPowerMax(\"player\", 3))\n    then\n        if not a[\"\"]  then\n            a[\"\"] = {\n                show = true,\n                changed = true,\n                duration = dur,\n                expirationTime = GetTime() + dur,\n                progressType = \"timed\"\n            }\n        else\n            local s = a[\"\"]\n            s.changed = true\n            s.duration = dur\n            s.expirationTime = GetTime() + dur\n            s.show = true\n            C_Timer.After(2, function() WeakAuras.ScanEvents(\"ENERGYTICK\", true) end)\n        end\n    end\n    aura_env.lastEnergy = currEnergy\n    return true\nend",
+							["events"] = "UNIT_POWER_FREQUENT:player ENERGYTICK",
 							["debuffType"] = "HELPFUL",
 						},
 						["untrigger"] = {
@@ -1398,32 +1399,32 @@ WeakAurasSaved = {
 				},
 				["useAdjustededMax"] = false,
 				["borderBackdrop"] = "Blizzard Tooltip",
-				["config"] = {
-				},
-				["useAdjustededMin"] = false,
-				["regionType"] = "aurabar",
-				["borderInFront"] = true,
 				["sparkColor"] = {
 					1, -- [1]
 					1, -- [2]
 					1, -- [3]
 					1, -- [4]
 				},
+				["useAdjustededMin"] = false,
+				["regionType"] = "aurabar",
+				["borderInFront"] = true,
+				["uid"] = "Xpswt5uiwYS",
 				["icon_side"] = "RIGHT",
-				["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+				["zoom"] = 0,
 				["width"] = 181.333297729492,
 				["sparkHeight"] = 30,
 				["texture"] = "Blizzard",
 				["frameStrata"] = 1,
-				["zoom"] = 0,
+				["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 				["spark"] = true,
 				["tocversion"] = 11302,
-				["sparkHidden"] = "NEVER",
+				["id"] = "energy tick",
 				["auto"] = true,
 				["alpha"] = 1,
 				["anchorFrameType"] = "SCREEN",
-				["id"] = "energy tick",
-				["uid"] = "Xpswt5uiwYS",
+				["sparkHidden"] = "NEVER",
+				["config"] = {
+				},
 				["inverse"] = true,
 				["xOffset"] = 5.77812957763672,
 				["orientation"] = "HORIZONTAL",
@@ -1474,14 +1475,14 @@ WeakAurasSaved = {
 							["event"] = "Health",
 							["subeventPrefix"] = "SPELL",
 							["unit"] = "player",
+							["custom"] = "function(a, e, t)\n    local currEnergy = UnitPower(\"player\", 3)\n    local dur = 2\n    if (e == \"UNIT_POWER_FREQUENT\" and currEnergy > (aura_env.lastEnergy or 0))\n    or (e == \"ENERGYTICK\" and t and currEnergy == UnitPowerMax(\"player\", 3))\n    then\n        if not a[\"\"]  then\n            a[\"\"] = {\n                show = true,\n                changed = true,\n                duration = dur,\n                expirationTime = GetTime() + dur,\n                progressType = \"timed\"\n            }\n        else\n            local s = a[\"\"]\n            s.changed = true\n            s.duration = dur\n            s.expirationTime = GetTime() + dur\n            s.show = true\n            C_Timer.After(2, function() WeakAuras.ScanEvents(\"ENERGYTICK\", true) end)\n        end\n    end\n    aura_env.lastEnergy = currEnergy\n    return true\nend",
 							["spellIds"] = {
 							},
-							["events"] = "UNIT_POWER_FREQUENT:player ENERGYTICK",
 							["custom_type"] = "stateupdate",
 							["check"] = "event",
 							["names"] = {
 							},
-							["custom"] = "function(a, e, t)\n    local currEnergy = UnitPower(\"player\", 3)\n    local dur = 2\n    if (e == \"UNIT_POWER_FREQUENT\" and currEnergy > (aura_env.lastEnergy or 0))\n    or (e == \"ENERGYTICK\" and t and currEnergy == UnitPowerMax(\"player\", 3))\n    then\n        if not a[\"\"]  then\n            a[\"\"] = {\n                show = true,\n                changed = true,\n                duration = dur,\n                expirationTime = GetTime() + dur,\n                progressType = \"timed\"\n            }\n        else\n            local s = a[\"\"]\n            s.changed = true\n            s.duration = dur\n            s.expirationTime = GetTime() + dur\n            s.show = true\n            C_Timer.After(2, function() WeakAuras.ScanEvents(\"ENERGYTICK\", true) end)\n        end\n    end\n    aura_env.lastEnergy = currEnergy\n    return true\nend",
+							["events"] = "UNIT_POWER_FREQUENT:player ENERGYTICK",
 							["debuffType"] = "HELPFUL",
 						},
 						["untrigger"] = {
@@ -1562,32 +1563,32 @@ WeakAurasSaved = {
 				},
 				["useAdjustededMax"] = false,
 				["borderBackdrop"] = "Blizzard Tooltip",
-				["config"] = {
-				},
-				["useAdjustededMin"] = false,
-				["regionType"] = "aurabar",
-				["borderInFront"] = true,
 				["sparkColor"] = {
 					1, -- [1]
 					1, -- [2]
 					1, -- [3]
 					1, -- [4]
 				},
+				["useAdjustededMin"] = false,
+				["regionType"] = "aurabar",
+				["borderInFront"] = true,
+				["uid"] = "Xpswt5uiwYS",
 				["icon_side"] = "RIGHT",
-				["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+				["zoom"] = 0,
 				["width"] = 181.333297729492,
 				["sparkHeight"] = 30,
 				["texture"] = "Blizzard",
 				["frameStrata"] = 1,
-				["zoom"] = 0,
+				["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 				["spark"] = true,
 				["tocversion"] = 11302,
-				["sparkHidden"] = "NEVER",
+				["id"] = "energy tick",
 				["auto"] = true,
 				["alpha"] = 1,
 				["anchorFrameType"] = "SCREEN",
-				["id"] = "energy tick",
-				["uid"] = "Xpswt5uiwYS",
+				["sparkHidden"] = "NEVER",
+				["config"] = {
+				},
 				["inverse"] = true,
 				["xOffset"] = 5.77812957763672,
 				["orientation"] = "HORIZONTAL",
@@ -1708,9 +1709,9 @@ WeakAurasSaved = {
 						["text_anchorPoint"] = "INNER_CENTER",
 						["anchorYOffset"] = 0,
 						["text_visible"] = true,
-						["rotateText"] = "NONE",
-						["anchorXOffset"] = 0,
 						["text_fontSize"] = 12,
+						["anchorXOffset"] = 0,
+						["rotateText"] = "NONE",
 					}, -- [2]
 					{
 						["text_shadowXOffset"] = 1,
@@ -1735,9 +1736,9 @@ WeakAurasSaved = {
 						["text_anchorPoint"] = "INNER_RIGHT",
 						["anchorYOffset"] = 0,
 						["text_visible"] = false,
-						["rotateText"] = "NONE",
-						["anchorXOffset"] = 0,
 						["text_fontSize"] = 12,
+						["anchorXOffset"] = 0,
+						["rotateText"] = "NONE",
 					}, -- [3]
 					{
 						["border_size"] = 16,
@@ -1796,33 +1797,33 @@ WeakAurasSaved = {
 				},
 				["xOffset"] = 6.33369445800781,
 				["parent"] = "Energy Bar + Tick",
-				["uid"] = "BEIGdMCH8gm",
-				["smoothProgress"] = true,
-				["useAdjustededMin"] = false,
-				["regionType"] = "aurabar",
-				["borderInFront"] = true,
 				["sparkColor"] = {
 					1, -- [1]
 					1, -- [2]
 					1, -- [3]
 					1, -- [4]
 				},
+				["smoothProgress"] = true,
+				["useAdjustededMin"] = false,
+				["regionType"] = "aurabar",
+				["borderInFront"] = true,
+				["config"] = {
+				},
 				["icon_side"] = "RIGHT",
-				["spark"] = false,
+				["auto"] = true,
 				["anchorFrameType"] = "SCREEN",
 				["sparkHeight"] = 30,
 				["texture"] = "Blizzard",
 				["alpha"] = 1,
 				["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-				["auto"] = true,
+				["spark"] = false,
 				["tocversion"] = 11302,
-				["sparkHidden"] = "NEVER",
+				["id"] = "Energy",
 				["zoom"] = 0,
 				["frameStrata"] = 1,
 				["width"] = 182.3,
-				["id"] = "Energy",
-				["config"] = {
-				},
+				["sparkHidden"] = "NEVER",
+				["uid"] = "BEIGdMCH8gm",
 				["inverse"] = false,
 				["sparkOffsetX"] = 0,
 				["orientation"] = "HORIZONTAL",
