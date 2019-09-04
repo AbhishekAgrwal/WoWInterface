@@ -1,11 +1,11 @@
 
 AtlasLootClassicDB = {
+	["global"] = {
+		["__addonrevision"] = 1010009,
+	},
 	["profileKeys"] = {
 		["Magastore - Noggenfogger"] = "Magastore - Noggenfogger",
 		["Krombopulos - Noggenfogger"] = "Krombopulos - Noggenfogger",
-	},
-	["global"] = {
-		["__addonrevision"] = 1010008,
 	},
 	["profiles"] = {
 		["Magastore - Noggenfogger"] = {
@@ -24,7 +24,7 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"WailingCaverns", -- [2]
+					"ShadowfangKeep", -- [2]
 					nil, -- [3]
 					1, -- [4]
 					0, -- [5]

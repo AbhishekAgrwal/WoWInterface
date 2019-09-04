@@ -47,20 +47,20 @@ BigTipDB = {
 		},
 		["statusbarPosition"] = "bottom",
 		["statusbarOffsetX"] = 0,
-		["skinMoreFrames"] = false,
+		["statusbarHeight"] = 1,
 		["bodyFontSize"] = "default",
-		["bodyFontFlag"] = "default",
-		["bodyFont"] = "default",
-		["statusbarOffsetY"] = 0,
-		["statusbarTexture"] = "Interface\\AddOns\\TinyTooltip\\texture\\StatusBar",
-		["headerFontSize"] = "default",
-		["statusbarText"] = false,
-		["statusbarHeight"] = 0,
-		["headerFontFlag"] = "default",
-		["borderCorner"] = "default",
-		["statusbarColor"] = "smooth",
-		["statusbarFontFlag"] = "THINOUTLINE",
 		["alwaysShowIdInfo"] = false,
+		["statusbarFontFlag"] = "THINOUTLINE",
+		["statusbarOffsetY"] = 0,
+		["statusbarColor"] = "default",
+		["borderCorner"] = "default",
+		["statusbarText"] = false,
+		["skinMoreFrames"] = false,
+		["headerFontFlag"] = "default",
+		["headerFontSize"] = 13,
+		["statusbarTexture"] = "Blizzard Raid Bar",
+		["bodyFont"] = "default",
+		["bodyFontFlag"] = "default",
 	},
 	["version"] = 2.6,
 	["variables"] = {
@@ -209,10 +209,8 @@ BigTipDB = {
 					["wildcard"] = "(%s)",
 					["filter"] = "none",
 				},
-				["className"] = {
-					["enable"] = true,
-					["color"] = "class",
-					["wildcard"] = "%s",
+				["factionIcon"] = {
+					["enable"] = false,
 					["filter"] = "none",
 				},
 				["factionBig"] = {
@@ -225,20 +223,22 @@ BigTipDB = {
 					["wildcard"] = "<%s>",
 					["filter"] = "none",
 				},
-				["name"] = {
-					["enable"] = true,
-					["color"] = "default",
-					["wildcard"] = "%s",
-					["filter"] = "none",
-				},
 				["title"] = {
 					["enable"] = true,
 					["color"] = "default",
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
-				["factionIcon"] = {
-					["enable"] = false,
+				["name"] = {
+					["enable"] = true,
+					["color"] = "default",
+					["wildcard"] = "%s",
+					["filter"] = "none",
+				},
+				["className"] = {
+					["enable"] = true,
+					["color"] = "class",
+					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
 				["classIcon"] = {
@@ -265,6 +265,7 @@ BigTipDB = {
 			["grayForDead"] = true,
 		},
 		["npc"] = {
+			["coloredBorder"] = "default",
 			["elements"] = {
 				{
 					"raidIcon", -- [1]
@@ -338,12 +339,12 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 				["raidIcon"] = {
-					["enable"] = true,
+					["enable"] = false,
 					["filter"] = "none",
 				},
 				["levelValue"] = {
 					["enable"] = true,
-					["color"] = "e5e5e5",
+					["color"] = "default",
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
@@ -352,7 +353,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 			},
-			["coloredBorder"] = "default",
+			["showTarget"] = false,
 			["anchor"] = {
 				["returnOnUnitFrame"] = false,
 				["position"] = "inherit",
@@ -361,7 +362,6 @@ BigTipDB = {
 				["p"] = "BOTTOMRIGHT",
 				["returnInCombat"] = false,
 			},
-			["showTarget"] = false,
 			["background"] = {
 				["colorfunc"] = "default",
 				["alpha"] = 0.9,

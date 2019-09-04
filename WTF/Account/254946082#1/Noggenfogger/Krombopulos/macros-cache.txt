@@ -3,3 +3,9 @@ VER 3 0000000001000001 "Sinister Strike" "INV_MISC_QUESTIONMARK"
 /cast Sinister Strike
 /startattack
 END
+VER 3 0000000001000002 "spam" "132090"
+/target Bessel
+/cast Gouge
+/cast Sinister Strike
+/startattack
+END

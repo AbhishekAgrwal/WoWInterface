@@ -4,26 +4,61 @@ CodexConfig = {
 	["showHighLevel"] = false,
 	["colorBySpawn"] = true,
 	["autoAccept"] = false,
-	["allQuestGivers"] = true,
 	["nameplateIcon"] = false,
-	["showFestival"] = false,
-	["autoTurnin"] = false,
-	["currentQuestGivers"] = true,
+	["allQuestGivers"] = true,
 	["trackingMethod"] = 1,
 	["spawnMarkerSize"] = 13,
+	["currentQuestGivers"] = true,
+	["autoTurnin"] = false,
+	["showFestival"] = false,
 	["questMarkerSize"] = 17,
 }
 CodexHistory = {
+	[1069] = true,
 	[891] = true,
+	[893] = true,
+	[6401] = true,
+	[6543] = true,
+	[962] = true,
+	[1093] = true,
+	[1483] = true,
+	[1487] = true,
+	[1491] = true,
+	[913] = true,
+	[868] = true,
+	[1094] = true,
+	[6548] = true,
+	[5052] = true,
+	[878] = true,
+	[882] = true,
+	[6629] = true,
+	[959] = true,
+	[898] = true,
+	[6284] = true,
+	[906] = true,
+	[3261] = true,
+	[2458] = true,
+	[1060] = true,
+	[6523] = true,
+	[874] = true,
+	[873] = true,
+	[6981] = true,
+	[3369] = true,
+	[1486] = true,
+	[879] = true,
+	[914] = true,
+	[899] = true,
+	[1061] = true,
+	[907] = true,
 }
 CodexBrowserFavorites = {
 	["items"] = {
 	},
-	["units"] = {
+	["objets"] = {
 	},
 	["quests"] = {
 	},
-	["objets"] = {
+	["units"] = {
 	},
 }
 CodexColors = {

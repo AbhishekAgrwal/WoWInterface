@@ -13,6 +13,13 @@ X: -225
 Y: 99
 W: 232
 H: 100
+Frame: Spy_MainWindow
+FrameLevel: 10
+Anchor: LEFT
+X: 13
+Y: 68
+W: 187
+H: 75
 Frame: AtlasLoot_GUI-Frame
 FrameLevel: 1
 Anchor: CENTER
@@ -20,6 +27,13 @@ X: 7
 Y: 30
 W: 920
 H: 600
+Frame: AtlasFrame
+FrameLevel: 1
+Anchor: TOP
+X: -28
+Y: -34
+W: 1023
+H: 631
 Frame: TargetFrame
 FrameLevel: 1
 Anchor: BOTTOM

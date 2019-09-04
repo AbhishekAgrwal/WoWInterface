@@ -8,35 +8,21 @@ Bagnon_Sets = {
 	},
 	["refrigeColor"] = {
 	},
-	["displayBlizzard"] = false,
+	["locked"] = true,
 	["displayPlayer"] = false,
 	["inscribeColor"] = {
 	},
 	["soulColor"] = {
 	},
-	["locked"] = true,
+	["displayBlizzard"] = false,
 	["glowQuest"] = true,
 	["quiverColor"] = {
 	},
-	["glowSets"] = true,
+	["normalColor"] = {
+	},
 	["reagentColor"] = {
 	},
 	["gemColor"] = {
-	},
-	["enchantColor"] = {
-	},
-	["glowAlpha"] = 0.01,
-	["emptySlots"] = true,
-	["glowNew"] = true,
-	["normalColor"] = {
-	},
-	["glowQuality"] = true,
-	["mineColor"] = {
-	},
-	["glowUnusable"] = false,
-	["herbColor"] = {
-	},
-	["profiles"] = {
 	},
 	["global"] = {
 		["inventory"] = {
@@ -92,13 +78,13 @@ Bagnon_Sets = {
 				["use/consume"] = false,
 				["contain"] = true,
 			},
-			["y"] = 111.000030517578,
+			["bagBreak"] = false,
 			["x"] = -4.0001220703125,
 			["search"] = false,
 			["broker"] = false,
 			["reverseSlots"] = false,
 			["itemScale"] = 0.92,
-			["bagBreak"] = false,
+			["y"] = 111.000030517578,
 			["reverseBags"] = false,
 		},
 		["vault"] = {
@@ -211,7 +197,21 @@ Bagnon_Sets = {
 			["columns"] = 8,
 		},
 	},
+	["glowAlpha"] = 0.49,
+	["emptySlots"] = true,
+	["glowNew"] = true,
+	["glowSets"] = true,
+	["glowQuality"] = true,
+	["mineColor"] = {
+	},
+	["glowUnusable"] = false,
+	["herbColor"] = {
+	},
+	["profiles"] = {
+	},
+	["enchantColor"] = {
+	},
 	["colorSlots"] = true,
-	["tipCount"] = true,
 	["fading"] = true,
+	["tipCount"] = true,
 }
