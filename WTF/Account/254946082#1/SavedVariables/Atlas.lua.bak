@@ -1,0 +1,10 @@
+
+AtlasDB = {
+	["profileKeys"] = {
+		["Krombopulos - Noggenfogger"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}
