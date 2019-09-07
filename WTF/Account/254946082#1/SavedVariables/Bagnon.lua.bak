@@ -8,15 +8,21 @@ Bagnon_Sets = {
 	},
 	["refrigeColor"] = {
 	},
-	["tipCount"] = true,
 	["fading"] = true,
+	["tipCount"] = true,
 	["inscribeColor"] = {
 	},
 	["soulColor"] = {
 	},
-	["displayBlizzard"] = false,
+	["locked"] = true,
 	["glowQuest"] = true,
 	["quiverColor"] = {
+	},
+	["enchantColor"] = {
+	},
+	["reagentColor"] = {
+	},
+	["gemColor"] = {
 	},
 	["global"] = {
 		["inventory"] = {
@@ -45,6 +51,11 @@ Bagnon_Sets = {
 			},
 			["point"] = "BOTTOMRIGHT",
 			["hiddenBags"] = {
+				false, -- [1]
+				false, -- [2]
+				false, -- [3]
+				false, -- [4]
+				[0] = false,
 			},
 			["scale"] = 1,
 			["borderColor"] = {
@@ -59,8 +70,8 @@ Bagnon_Sets = {
 			["money"] = true,
 			["reverseBags"] = false,
 			["alpha"] = 1,
-			["bagBreak"] = false,
 			["y"] = 111.000030517578,
+			["bagBreak"] = false,
 			["x"] = -4.0001220703125,
 			["search"] = false,
 			["broker"] = false,
@@ -191,16 +202,11 @@ Bagnon_Sets = {
 			["itemScale"] = 0.92,
 		},
 	},
-	["reagentColor"] = {
-	},
-	["gemColor"] = {
-	},
-	["enchantColor"] = {
-	},
 	["glowAlpha"] = 0.49,
 	["emptySlots"] = true,
 	["glowNew"] = true,
-	["glowSets"] = true,
+	["normalColor"] = {
+	},
 	["glowQuality"] = true,
 	["mineColor"] = {
 	},
@@ -209,9 +215,8 @@ Bagnon_Sets = {
 	["herbColor"] = {
 	},
 	["glowUnusable"] = false,
-	["normalColor"] = {
-	},
+	["glowSets"] = true,
 	["colorSlots"] = true,
-	["locked"] = true,
+	["displayBlizzard"] = false,
 	["displayPlayer"] = false,
 }

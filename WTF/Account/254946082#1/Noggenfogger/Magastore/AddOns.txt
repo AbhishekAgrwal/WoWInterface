@@ -30,5 +30,10 @@ Doom_CooldownPulse: disabled
 Leatrix_Maps: disabled
 tullaRange: disabled
 tullaRange_Config: disabled
-TinyTooltip: disabled
+TinyTooltip: enabled
 TipTac: disabled
+Atlas: disabled
+Atlas_ClassicWoW: disabled
+Dominos_Encounter: disabled
+Leatrix_Plus: disabled
+Spy: disabled

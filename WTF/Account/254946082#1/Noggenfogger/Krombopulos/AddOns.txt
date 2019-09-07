@@ -39,3 +39,6 @@ TipTacItemRef: disabled
 TipTacOptions: disabled
 TinyTooltip: enabled
 Leatrix_Plus: enabled
+Atlas: enabled
+Atlas_ClassicWoW: enabled
+Spy: enabled

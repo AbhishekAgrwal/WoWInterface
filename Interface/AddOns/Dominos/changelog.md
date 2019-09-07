@@ -1,5 +1,23 @@
 # Dominos Changelog
 
+8.2.23
+
+* Revert one bar mode being the default setting for the progress bar.
+
+8.2.22
+
+* Fix an issue preventing the main options panel for the progress bar from loading
+
+8.2.21
+
+* Fix an issue causing druid form states to not work properly if the player has a bar set for Moonkin form without having the form
+
+8.2.20
+
+* Skipped version 8.2.19
+* Added a Theme Action Buttons toggle to the main interface window to enable/disable the Dominos look for action buttons
+* Added support for the next version of Masque
+
 8.2.18
 
 * Fix a db migration error for completely new profiles

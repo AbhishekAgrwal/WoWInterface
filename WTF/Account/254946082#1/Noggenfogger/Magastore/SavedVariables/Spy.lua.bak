@@ -1,0 +1,25 @@
+
+SpyPerCharDB = {
+	["KOSData"] = {
+		["Borex"] = 1567625418,
+	},
+	["IgnoreData"] = {
+	},
+	["PlayerData"] = {
+		["Borex"] = {
+			["mapID"] = 1413,
+			["guild"] = "Wet Tabard Contest",
+			["zone"] = "The Barrens",
+			["mapY"] = 0.37,
+			["class"] = "HUNTER",
+			["isEnemy"] = true,
+			["race"] = "Dwarf",
+			["time"] = 1567625418,
+			["subZone"] = "Ratchet",
+			["level"] = 27,
+			["mapX"] = 0.62,
+			["name"] = "Borex",
+		},
+	},
+	["version"] = "1.1",
+}

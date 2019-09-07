@@ -1,5 +1,6 @@
 VER 3 0000000001000001 "Sinister Strike" "INV_MISC_QUESTIONMARK"
-#showtooltip()
+#showtooltip() Sinister Strike
+/cast Riposte
 /cast Sinister Strike
 /startattack
 END
