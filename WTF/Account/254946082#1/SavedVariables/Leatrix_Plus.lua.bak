@@ -129,7 +129,7 @@ LeaPlusDB = {
 	["FasterMovieSkip"] = "Off",
 	["MainPanelR"] = "CENTER",
 	["MaxCameraZoom"] = "Off",
-	["LeaStartPage"] = 1,
+	["LeaStartPage"] = 6,
 	["PlusPanelAlpha"] = 0,
 	["TooltipAnchorMenu"] = 1,
 }

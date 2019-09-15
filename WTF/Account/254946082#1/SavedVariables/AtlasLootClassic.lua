@@ -5,7 +5,7 @@ AtlasLootClassicDB = {
 		["Krombopulos - Noggenfogger"] = "Krombopulos - Noggenfogger",
 	},
 	["global"] = {
-		["__addonrevision"] = 1010009,
+		["__addonrevision"] = 1010010,
 	},
 	["profiles"] = {
 		["Magastore - Noggenfogger"] = {
@@ -25,7 +25,7 @@ AtlasLootClassicDB = {
 				["selected"] = {
 					nil, -- [1]
 					"RazorfenKraul", -- [2]
-					6, -- [3]
+					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

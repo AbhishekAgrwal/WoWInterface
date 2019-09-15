@@ -1,7 +1,7 @@
 
 AtlasLootClassicDB = {
 	["global"] = {
-		["__addonrevision"] = 1010009,
+		["__addonrevision"] = 1010010,
 	},
 	["profileKeys"] = {
 		["Magastore - Noggenfogger"] = "Magastore - Noggenfogger",
@@ -25,7 +25,7 @@ AtlasLootClassicDB = {
 				["selected"] = {
 					nil, -- [1]
 					"RazorfenKraul", -- [2]
-					6, -- [3]
+					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

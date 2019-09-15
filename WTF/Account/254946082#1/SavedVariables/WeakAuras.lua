@@ -261,17 +261,15 @@ WeakAurasSaved = {
 				},
 			},
 			["glowFrequency"] = 0.25,
-			["authorOptions"] = {
-			},
+			["glowLength"] = 10,
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 1,
 			["config"] = {
 			},
-			["useglowColor"] = false,
-			["keepAspectRatio"] = false,
+			["authorOptions"] = {
+			},
+			["selfPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["glowLines"] = 8,
-			["glowLength"] = 10,
 			["actions"] = {
 				["start"] = {
 				},
@@ -282,7 +280,9 @@ WeakAurasSaved = {
 					["do_sound"] = false,
 				},
 			},
-			["selfPoint"] = "CENTER",
+			["glowLines"] = 8,
+			["keepAspectRatio"] = false,
+			["useglowColor"] = false,
 			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
 			["zoom"] = 0,
@@ -519,7 +519,7 @@ WeakAurasSaved = {
 			["yOffset"] = -45.1674499511719,
 			["anchorPoint"] = "CENTER",
 			["borderSize"] = 2,
-			["uid"] = "bJ4ejxY68aj",
+			["internalVersion"] = 23,
 			["borderColor"] = {
 				0, -- [1]
 				0, -- [2]
@@ -572,7 +572,7 @@ WeakAurasSaved = {
 				},
 			},
 			["id"] = "Energy Bar + Tick",
-			["internalVersion"] = 23,
+			["uid"] = "bJ4ejxY68aj",
 			["frameStrata"] = 1,
 			["anchorFrameType"] = "SCREEN",
 			["borderInset"] = 1,
@@ -891,20 +891,17 @@ WeakAurasSaved = {
 			["height"] = 35,
 			["glowLines"] = 8,
 			["glowFrequency"] = 0.25,
-			["keepAspectRatio"] = false,
+			["width"] = 35,
 			["zoom"] = 0,
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 1,
-			["url"] = "https://wago.io/bpPhvVO7Y/1",
+			["keepAspectRatio"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["icon"] = true,
-			["regionType"] = "icon",
-			["glowLength"] = 10,
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -954,23 +951,14 @@ WeakAurasSaved = {
 				}, -- [2]
 				["activeTriggerMode"] = -10,
 			},
-			["alpha"] = 1,
-			["load"] = {
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+			["regionType"] = "icon",
+			["icon"] = true,
+			["glowLength"] = 10,
+			["xOffset"] = 6.1035156250e-05,
+			["config"] = {
 			},
+			["alpha"] = 1,
 			["tocversion"] = 11302,
-			["width"] = 35,
 			["cooldownTextDisabled"] = false,
 			["auto"] = true,
 			["glowScale"] = 1,
@@ -991,11 +979,23 @@ WeakAurasSaved = {
 			},
 			["frameStrata"] = 1,
 			["glowYOffset"] = 0,
-			["xOffset"] = 6.1035156250e-05,
-			["config"] = {
-			},
-			["inverse"] = false,
+			["url"] = "https://wago.io/bpPhvVO7Y/1",
 			["uid"] = "VoWoe3Nrqn1",
+			["inverse"] = false,
+			["load"] = {
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
 			["conditions"] = {
 			},
 			["anchorFrameType"] = "SCREEN",
@@ -1229,324 +1229,6 @@ WeakAurasSaved = {
 				["icon"] = false,
 			},
 		},
-		["J3qKxjFJLX5"] = {
-			["skippedVersions"] = {
-			},
-			["source"] = "import",
-			["lastUpdate"] = 1567889659,
-			["allowUpdates"] = true,
-			["data"] = {
-				["outline"] = "OUTLINE",
-				["fontSize"] = 32,
-				["conditions"] = {
-				},
-				["authorOptions"] = {
-				},
-				["displayText"] = "Riposte!",
-				["color"] = {
-					1, -- [1]
-					0, -- [2]
-					0, -- [3]
-					1, -- [4]
-				},
-				["yOffset"] = 150,
-				["regionType"] = "text",
-				["xOffset"] = 0,
-				["font"] = "Friz Quadrata TT",
-				["wordWrap"] = "WordWrap",
-				["customTextUpdate"] = "update",
-				["url"] = "https://wago.io/R7rU8rox1/1",
-				["actions"] = {
-					["start"] = {
-						["sound"] = "Interface\\Addons\\Details\\sounds\\sound_gun3.ogg",
-						["do_sound"] = true,
-					},
-					["init"] = {
-					},
-					["finish"] = {
-					},
-				},
-				["triggers"] = {
-					{
-						["trigger"] = {
-							["duration"] = "5.5",
-							["subeventPrefix"] = "SWING",
-							["destUnit"] = "player",
-							["use_missType"] = true,
-							["debuffType"] = "HELPFUL",
-							["type"] = "event",
-							["missType"] = "PARRY",
-							["spellName"] = 14251,
-							["use_unit"] = true,
-							["event"] = "Combat Log",
-							["use_targetRequired"] = true,
-							["realSpellName"] = "Riposte",
-							["use_spellName"] = true,
-							["spellIds"] = {
-							},
-							["unit"] = "player",
-							["unevent"] = "timed",
-							["use_destUnit"] = true,
-							["names"] = {
-							},
-							["subeventSuffix"] = "_MISSED",
-						},
-						["untrigger"] = {
-						},
-					}, -- [1]
-					{
-						["trigger"] = {
-							["type"] = "status",
-							["unevent"] = "auto",
-							["duration"] = "1",
-							["use_genericShowOn"] = true,
-							["genericShowOn"] = "showOnReady",
-							["unit"] = "player",
-							["realSpellName"] = "Riposte",
-							["use_spellName"] = true,
-							["subeventSuffix"] = "_CAST_START",
-							["use_unit"] = true,
-							["event"] = "Cooldown Progress (Spell)",
-							["subeventPrefix"] = "SPELL",
-							["use_track"] = true,
-							["spellName"] = 14251,
-						},
-						["untrigger"] = {
-							["genericShowOn"] = "showOnReady",
-						},
-					}, -- [2]
-					["disjunctive"] = "all",
-					["customTriggerLogic"] = "function(trigger)\n  return trigger[1];\nend",
-					["activeTriggerMode"] = -10,
-				},
-				["animation"] = {
-					["start"] = {
-						["type"] = "none",
-						["duration_type"] = "seconds",
-						["preset"] = "bounceDecay",
-					},
-					["main"] = {
-						["type"] = "none",
-						["duration_type"] = "seconds",
-					},
-					["finish"] = {
-						["type"] = "preset",
-						["duration_type"] = "seconds",
-						["preset"] = "fade",
-					},
-				},
-				["internalVersion"] = 23,
-				["justify"] = "LEFT",
-				["selfPoint"] = "BOTTOM",
-				["id"] = "Riposte!",
-				["uid"] = "J3qKxjFJLX5",
-				["frameStrata"] = 1,
-				["anchorFrameType"] = "SCREEN",
-				["tocversion"] = 11302,
-				["config"] = {
-				},
-				["version"] = 1,
-				["subRegions"] = {
-				},
-				["automaticWidth"] = "Auto",
-				["fixedWidth"] = 200,
-				["load"] = {
-					["use_class"] = true,
-					["use_never"] = false,
-					["class"] = {
-						["single"] = "ROGUE",
-						["multi"] = {
-						},
-					},
-					["spec"] = {
-						["multi"] = {
-						},
-					},
-					["size"] = {
-						["multi"] = {
-						},
-					},
-				},
-				["anchorPoint"] = "CENTER",
-			},
-		},
-		["VoWoe3Nrqn1"] = {
-			["skippedVersions"] = {
-			},
-			["source"] = "import",
-			["lastUpdate"] = 1567888893,
-			["allowUpdates"] = true,
-			["data"] = {
-				["glow"] = true,
-				["color"] = {
-					1, -- [1]
-					1, -- [2]
-					1, -- [3]
-					1, -- [4]
-				},
-				["yOffset"] = 104.66708374023,
-				["anchorPoint"] = "CENTER",
-				["cooldownSwipe"] = true,
-				["cooldownEdge"] = false,
-				["icon"] = true,
-				["useglowColor"] = false,
-				["internalVersion"] = 23,
-				["keepAspectRatio"] = false,
-				["selfPoint"] = "CENTER",
-				["desaturate"] = false,
-				["glowColor"] = {
-					1, -- [1]
-					1, -- [2]
-					1, -- [3]
-					1, -- [4]
-				},
-				["version"] = 1,
-				["subRegions"] = {
-					{
-						["text_shadowXOffset"] = 0,
-						["type"] = "subtext",
-						["text_text"] = "%s",
-						["text_color"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["text_font"] = "Friz Quadrata TT",
-						["text_shadowColor"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-						["text_shadowYOffset"] = 0,
-						["text_selfPoint"] = "AUTO",
-						["text_visible"] = true,
-						["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
-						["anchorYOffset"] = 0,
-						["rotateText"] = "NONE",
-						["text_fontSize"] = 12,
-						["anchorXOffset"] = 0,
-						["text_fontType"] = "OUTLINE",
-					}, -- [1]
-				},
-				["height"] = 64,
-				["glowLines"] = 8,
-				["glowFrequency"] = 0.25,
-				["glowType"] = "buttonOverlay",
-				["glowThickness"] = 1,
-				["glowXOffset"] = 0,
-				["anchorFrameType"] = "SCREEN",
-				["regionType"] = "icon",
-				["glowLength"] = 10,
-				["uid"] = "VoWoe3Nrqn1",
-				["load"] = {
-					["class"] = {
-						["multi"] = {
-						},
-					},
-					["spec"] = {
-						["multi"] = {
-						},
-					},
-					["size"] = {
-						["multi"] = {
-						},
-					},
-				},
-				["authorOptions"] = {
-				},
-				["xOffset"] = -138.00006103516,
-				["glowYOffset"] = 0,
-				["frameStrata"] = 1,
-				["animation"] = {
-					["start"] = {
-						["type"] = "none",
-						["duration_type"] = "seconds",
-					},
-					["main"] = {
-						["type"] = "none",
-						["duration_type"] = "seconds",
-					},
-					["finish"] = {
-						["type"] = "none",
-						["duration_type"] = "seconds",
-					},
-				},
-				["zoom"] = 0,
-				["auto"] = true,
-				["tocversion"] = 11302,
-				["id"] = "Riposte",
-				["glowScale"] = 1,
-				["alpha"] = 1,
-				["width"] = 64,
-				["cooldownTextDisabled"] = false,
-				["config"] = {
-				},
-				["inverse"] = false,
-				["url"] = "https://wago.io/bpPhvVO7Y/1",
-				["triggers"] = {
-					{
-						["trigger"] = {
-							["duration"] = "1",
-							["unit"] = "player",
-							["debuffType"] = "HELPFUL",
-							["type"] = "status",
-							["subeventSuffix"] = "_CAST_START",
-							["use_spellCount"] = false,
-							["buffShowOn"] = "showOnActive",
-							["event"] = "Action Usable",
-							["subeventPrefix"] = "SPELL",
-							["realSpellName"] = "Riposte",
-							["use_spellName"] = true,
-							["spellIds"] = {
-							},
-							["names"] = {
-							},
-							["unevent"] = "auto",
-							["use_unit"] = true,
-							["use_targetRequired"] = false,
-							["spellName"] = 14251,
-						},
-						["untrigger"] = {
-						},
-					}, -- [1]
-					{
-						["trigger"] = {
-							["type"] = "status",
-							["unevent"] = "auto",
-							["duration"] = "1",
-							["use_genericShowOn"] = true,
-							["genericShowOn"] = "showAlways",
-							["unit"] = "player",
-							["realSpellName"] = "Riposte",
-							["use_spellName"] = true,
-							["subeventSuffix"] = "_CAST_START",
-							["use_unit"] = true,
-							["event"] = "Cooldown Progress (Spell)",
-							["subeventPrefix"] = "SPELL",
-							["use_track"] = true,
-							["spellName"] = 14251,
-						},
-						["untrigger"] = {
-							["genericShowOn"] = "showAlways",
-						},
-					}, -- [2]
-					["activeTriggerMode"] = -10,
-				},
-				["conditions"] = {
-				},
-				["actions"] = {
-					["start"] = {
-					},
-					["init"] = {
-					},
-					["finish"] = {
-					},
-				},
-				["glowBorder"] = false,
-			},
-		},
 		["bJ4ejxY68aj"] = {
 			["skippedVersions"] = {
 			},
@@ -1652,100 +1334,135 @@ WeakAurasSaved = {
 				["borderEdge"] = "1 Pixel",
 			},
 		},
-		["2pUHha(ERhl"] = {
+		["J3qKxjFJLX5"] = {
 			["skippedVersions"] = {
 			},
 			["source"] = "import",
-			["lastUpdate"] = 1567329593,
+			["lastUpdate"] = 1567889659,
 			["allowUpdates"] = true,
 			["data"] = {
-				["backdropColor"] = {
-					1, -- [1]
-					1, -- [2]
-					1, -- [3]
-					0.5, -- [4]
-				},
-				["controlledChildren"] = {
-				},
-				["borderBackdrop"] = "Blizzard Tooltip",
+				["outline"] = "OUTLINE",
+				["fontSize"] = 32,
 				["xOffset"] = 0,
-				["border"] = false,
-				["yOffset"] = 0,
-				["regionType"] = "group",
-				["borderSize"] = 2,
-				["borderColor"] = {
-					0, -- [1]
+				["color"] = {
+					1, -- [1]
 					0, -- [2]
 					0, -- [3]
 					1, -- [4]
 				},
+				["displayText"] = "Riposte!",
+				["regionType"] = "text",
+				["yOffset"] = 150,
 				["anchorPoint"] = "CENTER",
-				["scale"] = 1,
-				["actions"] = {
+				["conditions"] = {
+				},
+				["wordWrap"] = "WordWrap",
+				["animation"] = {
 					["start"] = {
+						["type"] = "none",
+						["duration_type"] = "seconds",
+						["preset"] = "bounceDecay",
+					},
+					["main"] = {
+						["type"] = "none",
+						["duration_type"] = "seconds",
 					},
 					["finish"] = {
+						["type"] = "preset",
+						["duration_type"] = "seconds",
+						["preset"] = "fade",
+					},
+				},
+				["customTextUpdate"] = "update",
+				["url"] = "https://wago.io/R7rU8rox1/1",
+				["actions"] = {
+					["start"] = {
+						["sound"] = "Interface\\Addons\\Details\\sounds\\sound_gun3.ogg",
+						["do_sound"] = true,
 					},
 					["init"] = {
+					},
+					["finish"] = {
 					},
 				},
 				["triggers"] = {
 					{
 						["trigger"] = {
-							["names"] = {
-							},
-							["type"] = "aura2",
+							["duration"] = "5.5",
+							["subeventPrefix"] = "SWING",
+							["destUnit"] = "player",
+							["use_missType"] = true,
+							["debuffType"] = "HELPFUL",
+							["type"] = "event",
+							["missType"] = "PARRY",
+							["spellName"] = 14251,
+							["use_unit"] = true,
+							["event"] = "Combat Log",
+							["use_targetRequired"] = true,
+							["realSpellName"] = "Riposte",
+							["use_spellName"] = true,
 							["spellIds"] = {
 							},
-							["subeventSuffix"] = "_CAST_START",
 							["unit"] = "player",
-							["subeventPrefix"] = "SPELL",
-							["event"] = "Health",
-							["debuffType"] = "HELPFUL",
+							["unevent"] = "timed",
+							["use_destUnit"] = true,
+							["names"] = {
+							},
+							["subeventSuffix"] = "_MISSED",
 						},
 						["untrigger"] = {
 						},
 					}, -- [1]
+					{
+						["trigger"] = {
+							["type"] = "status",
+							["unevent"] = "auto",
+							["duration"] = "1",
+							["use_genericShowOn"] = true,
+							["genericShowOn"] = "showOnReady",
+							["unit"] = "player",
+							["realSpellName"] = "Riposte",
+							["use_spellName"] = true,
+							["subeventSuffix"] = "_CAST_START",
+							["use_unit"] = true,
+							["event"] = "Cooldown Progress (Spell)",
+							["subeventPrefix"] = "SPELL",
+							["use_track"] = true,
+							["spellName"] = 14251,
+						},
+						["untrigger"] = {
+							["genericShowOn"] = "showOnReady",
+						},
+					}, -- [2]
+					["disjunctive"] = "all",
+					["customTriggerLogic"] = "function(trigger)\n  return trigger[1];\nend",
+					["activeTriggerMode"] = -10,
 				},
-				["authorOptions"] = {
-				},
+				["font"] = "Friz Quadrata TT",
 				["internalVersion"] = 23,
-				["tocversion"] = 11302,
-				["animation"] = {
-					["start"] = {
-						["duration_type"] = "seconds",
-						["type"] = "none",
-					},
-					["main"] = {
-						["duration_type"] = "seconds",
-						["type"] = "none",
-					},
-					["finish"] = {
-						["duration_type"] = "seconds",
-						["type"] = "none",
-					},
-				},
-				["id"] = "Energy Bar + Tick",
-				["borderOffset"] = 4,
+				["justify"] = "LEFT",
+				["selfPoint"] = "BOTTOM",
+				["id"] = "Riposte!",
+				["uid"] = "J3qKxjFJLX5",
 				["frameStrata"] = 1,
 				["anchorFrameType"] = "SCREEN",
+				["tocversion"] = 11302,
 				["config"] = {
 				},
-				["borderInset"] = 1,
-				["uid"] = "bJ4ejxY68aj",
+				["version"] = 1,
 				["subRegions"] = {
 				},
-				["selfPoint"] = "BOTTOMLEFT",
-				["conditions"] = {
-				},
+				["automaticWidth"] = "Auto",
+				["fixedWidth"] = 200,
 				["load"] = {
-					["use_class"] = "true",
-					["spec"] = {
+					["use_class"] = true,
+					["use_never"] = false,
+					["class"] = {
+						["single"] = "ROGUE",
 						["multi"] = {
 						},
 					},
-					["class"] = {
-						["single"] = "ROGUE",
+					["spec"] = {
 						["multi"] = {
 						},
 					},
@@ -1754,7 +1471,8 @@ WeakAurasSaved = {
 						},
 					},
 				},
-				["borderEdge"] = "1 Pixel",
+				["authorOptions"] = {
+				},
 			},
 		},
 		["Xpswt5uiwYS"] = {
@@ -1919,6 +1637,288 @@ WeakAurasSaved = {
 					0, -- [3]
 					0, -- [4]
 				},
+			},
+		},
+		["2pUHha(ERhl"] = {
+			["skippedVersions"] = {
+			},
+			["source"] = "import",
+			["lastUpdate"] = 1567329593,
+			["allowUpdates"] = true,
+			["data"] = {
+				["backdropColor"] = {
+					1, -- [1]
+					1, -- [2]
+					1, -- [3]
+					0.5, -- [4]
+				},
+				["controlledChildren"] = {
+				},
+				["borderBackdrop"] = "Blizzard Tooltip",
+				["xOffset"] = 0,
+				["border"] = false,
+				["yOffset"] = 0,
+				["regionType"] = "group",
+				["borderSize"] = 2,
+				["borderColor"] = {
+					0, -- [1]
+					0, -- [2]
+					0, -- [3]
+					1, -- [4]
+				},
+				["anchorPoint"] = "CENTER",
+				["scale"] = 1,
+				["actions"] = {
+					["start"] = {
+					},
+					["finish"] = {
+					},
+					["init"] = {
+					},
+				},
+				["triggers"] = {
+					{
+						["trigger"] = {
+							["names"] = {
+							},
+							["type"] = "aura2",
+							["spellIds"] = {
+							},
+							["subeventSuffix"] = "_CAST_START",
+							["unit"] = "player",
+							["subeventPrefix"] = "SPELL",
+							["event"] = "Health",
+							["debuffType"] = "HELPFUL",
+						},
+						["untrigger"] = {
+						},
+					}, -- [1]
+				},
+				["authorOptions"] = {
+				},
+				["internalVersion"] = 23,
+				["tocversion"] = 11302,
+				["animation"] = {
+					["start"] = {
+						["duration_type"] = "seconds",
+						["type"] = "none",
+					},
+					["main"] = {
+						["duration_type"] = "seconds",
+						["type"] = "none",
+					},
+					["finish"] = {
+						["duration_type"] = "seconds",
+						["type"] = "none",
+					},
+				},
+				["id"] = "Energy Bar + Tick",
+				["borderOffset"] = 4,
+				["frameStrata"] = 1,
+				["anchorFrameType"] = "SCREEN",
+				["config"] = {
+				},
+				["borderInset"] = 1,
+				["uid"] = "bJ4ejxY68aj",
+				["subRegions"] = {
+				},
+				["selfPoint"] = "BOTTOMLEFT",
+				["conditions"] = {
+				},
+				["load"] = {
+					["use_class"] = "true",
+					["spec"] = {
+						["multi"] = {
+						},
+					},
+					["class"] = {
+						["single"] = "ROGUE",
+						["multi"] = {
+						},
+					},
+					["size"] = {
+						["multi"] = {
+						},
+					},
+				},
+				["borderEdge"] = "1 Pixel",
+			},
+		},
+		["VoWoe3Nrqn1"] = {
+			["skippedVersions"] = {
+			},
+			["source"] = "import",
+			["lastUpdate"] = 1567888893,
+			["allowUpdates"] = true,
+			["data"] = {
+				["glow"] = true,
+				["color"] = {
+					1, -- [1]
+					1, -- [2]
+					1, -- [3]
+					1, -- [4]
+				},
+				["yOffset"] = 104.66708374023,
+				["anchorPoint"] = "CENTER",
+				["cooldownSwipe"] = true,
+				["cooldownEdge"] = false,
+				["icon"] = true,
+				["useglowColor"] = false,
+				["internalVersion"] = 23,
+				["keepAspectRatio"] = false,
+				["selfPoint"] = "CENTER",
+				["desaturate"] = false,
+				["glowColor"] = {
+					1, -- [1]
+					1, -- [2]
+					1, -- [3]
+					1, -- [4]
+				},
+				["version"] = 1,
+				["subRegions"] = {
+					{
+						["text_shadowXOffset"] = 0,
+						["type"] = "subtext",
+						["text_text"] = "%s",
+						["text_color"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["text_font"] = "Friz Quadrata TT",
+						["text_shadowColor"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+						["text_shadowYOffset"] = 0,
+						["text_selfPoint"] = "AUTO",
+						["text_visible"] = true,
+						["text_anchorPoint"] = "INNER_BOTTOMRIGHT",
+						["anchorYOffset"] = 0,
+						["rotateText"] = "NONE",
+						["text_fontSize"] = 12,
+						["anchorXOffset"] = 0,
+						["text_fontType"] = "OUTLINE",
+					}, -- [1]
+				},
+				["height"] = 64,
+				["glowLines"] = 8,
+				["glowFrequency"] = 0.25,
+				["glowType"] = "buttonOverlay",
+				["glowThickness"] = 1,
+				["glowXOffset"] = 0,
+				["glowLength"] = 10,
+				["regionType"] = "icon",
+				["load"] = {
+					["class"] = {
+						["multi"] = {
+						},
+					},
+					["spec"] = {
+						["multi"] = {
+						},
+					},
+					["size"] = {
+						["multi"] = {
+						},
+					},
+				},
+				["authorOptions"] = {
+				},
+				["xOffset"] = -138.00006103516,
+				["animation"] = {
+					["start"] = {
+						["type"] = "none",
+						["duration_type"] = "seconds",
+					},
+					["main"] = {
+						["type"] = "none",
+						["duration_type"] = "seconds",
+					},
+					["finish"] = {
+						["type"] = "none",
+						["duration_type"] = "seconds",
+					},
+				},
+				["uid"] = "VoWoe3Nrqn1",
+				["anchorFrameType"] = "SCREEN",
+				["width"] = 64,
+				["frameStrata"] = 1,
+				["zoom"] = 0,
+				["auto"] = true,
+				["tocversion"] = 11302,
+				["id"] = "Riposte",
+				["glowScale"] = 1,
+				["alpha"] = 1,
+				["glowYOffset"] = 0,
+				["cooldownTextDisabled"] = false,
+				["config"] = {
+				},
+				["inverse"] = false,
+				["url"] = "https://wago.io/bpPhvVO7Y/1",
+				["triggers"] = {
+					{
+						["trigger"] = {
+							["duration"] = "1",
+							["unit"] = "player",
+							["debuffType"] = "HELPFUL",
+							["type"] = "status",
+							["subeventSuffix"] = "_CAST_START",
+							["use_spellCount"] = false,
+							["buffShowOn"] = "showOnActive",
+							["event"] = "Action Usable",
+							["subeventPrefix"] = "SPELL",
+							["realSpellName"] = "Riposte",
+							["use_spellName"] = true,
+							["spellIds"] = {
+							},
+							["names"] = {
+							},
+							["unevent"] = "auto",
+							["use_unit"] = true,
+							["use_targetRequired"] = false,
+							["spellName"] = 14251,
+						},
+						["untrigger"] = {
+						},
+					}, -- [1]
+					{
+						["trigger"] = {
+							["type"] = "status",
+							["unevent"] = "auto",
+							["duration"] = "1",
+							["use_genericShowOn"] = true,
+							["genericShowOn"] = "showAlways",
+							["unit"] = "player",
+							["realSpellName"] = "Riposte",
+							["use_spellName"] = true,
+							["subeventSuffix"] = "_CAST_START",
+							["use_unit"] = true,
+							["event"] = "Cooldown Progress (Spell)",
+							["subeventPrefix"] = "SPELL",
+							["use_track"] = true,
+							["spellName"] = 14251,
+						},
+						["untrigger"] = {
+							["genericShowOn"] = "showAlways",
+						},
+					}, -- [2]
+					["activeTriggerMode"] = -10,
+				},
+				["conditions"] = {
+				},
+				["actions"] = {
+					["start"] = {
+					},
+					["init"] = {
+					},
+					["finish"] = {
+					},
+				},
+				["glowBorder"] = false,
 			},
 		},
 		["sNH6SzSVghW"] = {

@@ -26,7 +26,6 @@ DominosDB = {
 	},
 	["profiles"] = {
 		["Rogue"] = {
-			["showgrid"] = true,
 			["frames"] = {
 				{
 					["showInPetBattleUI"] = false,
@@ -191,20 +190,21 @@ DominosDB = {
 				}, -- [9]
 				{
 					["showInPetBattleUI"] = false,
+					["point"] = "RIGHT",
 					["scale"] = 1,
 					["showInOverrideUI"] = false,
 					["hidden"] = true,
 					["padW"] = 2,
-					["x"] = 142,
-					["y"] = 160,
+					["fadeAlpha"] = 0,
+					["columns"] = 1,
 					["spacing"] = 4,
 					["padH"] = 2,
 					["pages"] = {
 						["ROGUE"] = {
 						},
 					},
-					["numButtons"] = 12,
-					["anchor"] = "9TC",
+					["numButtons"] = 8,
+					["y"] = -38,
 				}, -- [10]
 				["cast"] = {
 					["showInPetBattleUI"] = false,
@@ -217,9 +217,9 @@ DominosDB = {
 					["latencyPadding"] = 0,
 					["padH"] = 1,
 					["display"] = {
+						["icon"] = false,
 						["time"] = true,
 						["border"] = true,
-						["icon"] = false,
 					},
 					["y"] = 79,
 					["h"] = 27,
@@ -227,22 +227,22 @@ DominosDB = {
 				},
 				["vehicle"] = {
 					["showInPetBattleUI"] = false,
-					["x"] = 312,
 					["point"] = "BOTTOMLEFT",
-					["spacing"] = 0,
-					["scale"] = 0.8,
+					["scale"] = 1,
 					["showInOverrideUI"] = false,
-					["anchor"] = "1LT",
-					["y"] = 20,
+					["y"] = 24,
+					["x"] = 237,
+					["spacing"] = 0,
+					["fadeAlpha"] = 0,
 				},
 				["roll"] = {
-					["y"] = -90,
-					["x"] = -215,
-					["point"] = "TOPRIGHT",
+					["showInPetBattleUI"] = true,
+					["x"] = 228,
+					["columns"] = 1,
 					["spacing"] = 2,
 					["showInOverrideUI"] = true,
-					["columns"] = 1,
-					["showInPetBattleUI"] = true,
+					["y"] = -70,
+					["point"] = "TOP",
 				},
 				["exp"] = {
 					["compressValues"] = false,
@@ -279,13 +279,13 @@ DominosDB = {
 				},
 				["bags"] = {
 					["showInPetBattleUI"] = false,
-					["fadeAlpha"] = 0,
 					["point"] = "BOTTOMRIGHT",
-					["spacing"] = 2,
 					["scale"] = 1,
-					["oneBag"] = true,
 					["showInOverrideUI"] = false,
 					["showstates"] = "",
+					["spacing"] = 2,
+					["fadeAlpha"] = 0,
+					["oneBag"] = true,
 				},
 				["pet"] = {
 					["y"] = -38,
@@ -322,6 +322,7 @@ DominosDB = {
 			["minimap"] = {
 				["minimapPos"] = 163.228732265132,
 			},
+			["showgrid"] = true,
 		},
 		["Warrior"] = {
 			["frames"] = {

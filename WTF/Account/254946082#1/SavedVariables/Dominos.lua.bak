@@ -26,18 +26,16 @@ DominosDB = {
 	},
 	["profiles"] = {
 		["Rogue"] = {
+			["showgrid"] = true,
 			["frames"] = {
 				{
 					["showInPetBattleUI"] = false,
-					["showstates"] = "",
 					["point"] = "BOTTOM",
 					["scale"] = 0.85,
 					["showInOverrideUI"] = false,
+					["showstates"] = "",
 					["y"] = 9,
 					["x"] = -239,
-					["padW"] = 2,
-					["spacing"] = 4,
-					["anchor"] = "expTL",
 					["pages"] = {
 						["ROGUE"] = {
 							["page2"] = 1,
@@ -49,6 +47,9 @@ DominosDB = {
 							["page6"] = 5,
 						},
 					},
+					["spacing"] = 4,
+					["anchor"] = "expTL",
+					["padW"] = 2,
 					["numButtons"] = 12,
 					["padH"] = 2,
 				}, -- [1]
@@ -190,20 +191,21 @@ DominosDB = {
 				}, -- [9]
 				{
 					["showInPetBattleUI"] = false,
+					["point"] = "RIGHT",
 					["scale"] = 1,
 					["showInOverrideUI"] = false,
 					["hidden"] = true,
 					["padW"] = 2,
-					["x"] = 142,
-					["padH"] = 2,
+					["fadeAlpha"] = 0,
+					["y"] = -38,
 					["spacing"] = 4,
-					["anchor"] = "9TC",
-					["numButtons"] = 12,
+					["padH"] = 2,
+					["numButtons"] = 8,
 					["pages"] = {
 						["ROGUE"] = {
 						},
 					},
-					["y"] = 160,
+					["columns"] = 1,
 				}, -- [10]
 				["cast"] = {
 					["showInPetBattleUI"] = false,
@@ -216,22 +218,22 @@ DominosDB = {
 					["latencyPadding"] = 0,
 					["h"] = 27,
 					["display"] = {
+						["time"] = true,
 						["border"] = true,
 						["icon"] = false,
-						["time"] = true,
 					},
 					["y"] = 79,
 					["padH"] = 1,
 					["texture"] = "Blizzard",
 				},
 				["roll"] = {
-					["y"] = -90,
-					["x"] = -215,
-					["point"] = "TOPRIGHT",
+					["y"] = -70,
+					["x"] = 228,
+					["point"] = "TOP",
 					["spacing"] = 2,
 					["showInOverrideUI"] = true,
-					["showInPetBattleUI"] = true,
 					["columns"] = 1,
+					["showInPetBattleUI"] = true,
 				},
 				["menu"] = {
 					["showInPetBattleUI"] = false,
@@ -281,13 +283,13 @@ DominosDB = {
 				},
 				["bags"] = {
 					["showInPetBattleUI"] = false,
+					["fadeAlpha"] = 0,
 					["point"] = "BOTTOMRIGHT",
+					["spacing"] = 2,
 					["scale"] = 1,
 					["oneBag"] = true,
-					["fadeAlpha"] = 0,
-					["spacing"] = 2,
-					["showstates"] = "",
 					["showInOverrideUI"] = false,
+					["showstates"] = "",
 				},
 				["class"] = {
 					["showInPetBattleUI"] = false,
@@ -309,19 +311,18 @@ DominosDB = {
 				},
 				["vehicle"] = {
 					["showInPetBattleUI"] = false,
+					["fadeAlpha"] = 0,
 					["point"] = "BOTTOMLEFT",
-					["scale"] = 0.8,
-					["showInOverrideUI"] = false,
-					["y"] = 20,
-					["x"] = 312,
 					["spacing"] = 0,
-					["anchor"] = "1LT",
+					["scale"] = 1,
+					["showInOverrideUI"] = false,
+					["x"] = 237,
+					["y"] = 24,
 				},
 			},
 			["minimap"] = {
 				["minimapPos"] = 163.228732265132,
 			},
-			["showgrid"] = true,
 		},
 		["Warrior"] = {
 			["frames"] = {

@@ -47,20 +47,20 @@ BigTipDB = {
 		},
 		["statusbarPosition"] = "bottom",
 		["statusbarOffsetX"] = 0,
-		["skinMoreFrames"] = false,
-		["bodyFontSize"] = "default",
-		["bodyFontFlag"] = "default",
-		["bodyFont"] = "default",
-		["statusbarOffsetY"] = 0,
-		["statusbarTexture"] = "Blizzard Raid Bar",
-		["headerFontSize"] = 13,
-		["statusbarText"] = false,
 		["statusbarHeight"] = 1,
-		["headerFontFlag"] = "default",
-		["borderCorner"] = "default",
-		["statusbarColor"] = "default",
-		["statusbarFontFlag"] = "THINOUTLINE",
+		["bodyFontSize"] = "default",
 		["alwaysShowIdInfo"] = false,
+		["statusbarFontFlag"] = "THINOUTLINE",
+		["statusbarOffsetY"] = 0,
+		["statusbarColor"] = "default",
+		["borderCorner"] = "default",
+		["statusbarText"] = false,
+		["skinMoreFrames"] = false,
+		["headerFontFlag"] = "default",
+		["headerFontSize"] = 13,
+		["statusbarTexture"] = "Blizzard Raid Bar",
+		["bodyFont"] = "default",
+		["bodyFontFlag"] = "default",
 	},
 	["version"] = 2.6,
 	["variables"] = {
@@ -209,19 +209,23 @@ BigTipDB = {
 					["wildcard"] = "(%s)",
 					["filter"] = "none",
 				},
-				["guildName"] = {
-					["enable"] = true,
-					["color"] = "itemQuality",
-					["wildcard"] = "<%s>",
+				["factionIcon"] = {
+					["enable"] = false,
 					["filter"] = "none",
 				},
 				["factionBig"] = {
 					["enable"] = false,
 					["filter"] = "none",
 				},
-				["className"] = {
+				["guildName"] = {
 					["enable"] = true,
-					["color"] = "class",
+					["color"] = "itemQuality",
+					["wildcard"] = "<%s>",
+					["filter"] = "none",
+				},
+				["title"] = {
+					["enable"] = true,
+					["color"] = "default",
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
@@ -231,14 +235,10 @@ BigTipDB = {
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
-				["title"] = {
+				["className"] = {
 					["enable"] = true,
-					["color"] = "default",
+					["color"] = "class",
 					["wildcard"] = "%s",
-					["filter"] = "none",
-				},
-				["factionIcon"] = {
-					["enable"] = false,
 					["filter"] = "none",
 				},
 				["classIcon"] = {
@@ -265,6 +265,7 @@ BigTipDB = {
 			["grayForDead"] = true,
 		},
 		["npc"] = {
+			["coloredBorder"] = "default",
 			["elements"] = {
 				{
 					"raidIcon", -- [1]
@@ -352,7 +353,7 @@ BigTipDB = {
 					["filter"] = "none",
 				},
 			},
-			["coloredBorder"] = "default",
+			["showTarget"] = false,
 			["anchor"] = {
 				["returnOnUnitFrame"] = false,
 				["position"] = "inherit",
@@ -361,7 +362,6 @@ BigTipDB = {
 				["p"] = "BOTTOMRIGHT",
 				["returnInCombat"] = false,
 			},
-			["showTarget"] = false,
 			["background"] = {
 				["colorfunc"] = "default",
 				["alpha"] = 0.9,

@@ -37,3 +37,5 @@ Atlas_ClassicWoW: disabled
 Dominos_Encounter: disabled
 Leatrix_Plus: disabled
 Spy: disabled
+BrightleafNameplateClassColors: disabled
+AdvancedInterfaceOptions: enabled

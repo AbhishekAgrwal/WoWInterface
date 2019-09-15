@@ -1,3 +1,8 @@
+VER 3 0000000001000003 "PP" "INV_MISC_QUESTIONMARK"
+#Showtooltip()
+/cast Pick Pocket
+/cast Sinister Strike
+END
 VER 3 0000000001000001 "Sinister Strike" "INV_MISC_QUESTIONMARK"
 #showtooltip() Sinister Strike
 /cast Riposte
@@ -5,7 +10,7 @@ VER 3 0000000001000001 "Sinister Strike" "INV_MISC_QUESTIONMARK"
 /startattack
 END
 VER 3 0000000001000002 "spam" "132090"
-/target Bessel
+/target Cozzle
 /cast Gouge
 /cast Sinister Strike
 /startattack

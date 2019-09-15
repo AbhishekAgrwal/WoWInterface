@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- 	Leatrix Plus 1.13.27 (4th September 2019)
+-- 	Leatrix Plus 1.13.30 (13th September 2019)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 --	Version
-	LeaPlusLC["AddonVer"] = "1.13.27"
+	LeaPlusLC["AddonVer"] = "1.13.30"
 	LeaPlusLC["RestartReq"] = nil
 
 --	If client restart is required and has not been done, show warning and quit
@@ -2129,29 +2129,31 @@
 
 		if LeaPlusLC["ShowVendorPrice"] == "On" then
 
-			-- Function to add vendor price to tooltips
-			local function ShowVendorPrice(tooltip)
-				-- Do nothing if money frame is already showing
+			-- Function to show vendor price
+			local function ShowSellPrice(tooltip, tooltipObject)
 				if tooltip.shownMoneyFrames then return end
-				-- Get item sell price
-				local void, link = tooltip:GetItem()
-				if not link then return end
-				local void, void, void, void, void, void, void, void, void, void, itemSellPrice = GetItemInfo(link)
-				if not itemSellPrice or itemSellPrice <= 0 then return end
+				tooltipObject = tooltipObject or GameTooltip
+				-- Get container
 				local container = GetMouseFocus()
 				if not container then return end
-				-- Get item quantity
-				local buttonName = container:GetName() and (container:GetName() .. "Count")
-				local count = container.count or (container.Count and container.Count:GetText()) or (container.Quantity and container.Quantity:GetText()) or (buttonName and _G[buttonName] and _G[buttonName]:GetText())
-				count = tonumber(count) or 1
-				if count <= 1 then count = 1 end
-				-- Show sell price in tooltip
-				SetTooltipMoney(tooltip, count * itemSellPrice, "STATIC", SELL_PRICE .. ":")
+				-- Get item
+				local itemName, itemlink = tooltipObject:GetItem()
+				if not itemlink then return end
+				local void, void, void, void, void, void, void, void, void, void, sellPrice = GetItemInfo(itemlink)
+				if sellPrice and sellPrice > 0 then
+					local count = container and type(container.count) == "number" and container.count or 1
+					if sellPrice then
+						SetTooltipMoney(tooltip, sellPrice * count, "STATIC", SELL_PRICE .. ":")
+					end
+				end
+				-- Refresh chat tooltips
+				if tooltipObject == ItemRefTooltip then ItemRefTooltip:Show() end
 			end
 
-			-- Run function for regular tooltips and chat link tooltips
-			GameTooltip:HookScript("OnTooltipSetItem", ShowVendorPrice)
-			ItemRefTooltip:HookScript("OnTooltipSetItem", ShowVendorPrice)
+			-- Show vendor price when tooltips are shown
+			GameTooltip:HookScript("OnTooltipSetItem", ShowSellPrice)
+			hooksecurefunc(GameTooltip, "SetHyperlink", function(tip) ShowSellPrice(tip, GameTooltip) end)
+			hooksecurefunc(ItemRefTooltip, "SetHyperlink", function(tip) ShowSellPrice(tip, ItemRefTooltip) end)
 
 		end
 
@@ -2832,6 +2834,20 @@
 			-- Create configuration panel
 			local SideFrames = LeaPlusLC:CreatePanel("Frames", "SideFrames")
 
+			-- Create Titan Panel screen adjust warning
+			local titanFrame = CreateFrame("FRAME", nil, SideFrames)
+			titanFrame:SetAllPoints()
+			titanFrame:Hide()
+			LeaPlusLC:MakeTx(titanFrame, "Warning", 16, -172)
+			titanFrame.txt = LeaPlusLC:MakeWD(titanFrame, "Titan Panel screen adjust needs to be disabled for frames to be saved correctly.", 16, -192, 500)
+			titanFrame.txt:SetWordWrap(false)
+			titanFrame.txt:SetWidth(520)
+			titanFrame.btn = LeaPlusLC:CreateButton("fixTitanBtn", titanFrame, "Okay, disable screen adjust for me", "TOPLEFT", 16, -212, 0, 25, true, "Click to disable Titan Panel screen adjust.  Your UI will be reloaded.")
+			titanFrame.btn:SetScript("OnClick", function()
+				TitanPanelSetVar("ScreenAdjust", 1)
+				ReloadUI()
+			end)
+
 			-- Variable used to store currently selected frame
 			local currentframe
 
@@ -3119,6 +3135,17 @@
 							LeaPlusFramesSaveCache(vf)
 						end
 					else
+						-- Show Titan Panel screen adjust warning if Titan Panel is installed with screen adjust enabled
+						if select(2, GetAddOnInfo("TitanClassic")) then
+							if IsAddOnLoaded("TitanClassic") then
+								if TitanPanelSetVar and TitanPanelGetVar then
+									if not TitanPanelGetVar("ScreenAdjust") then
+										titanFrame:Show()
+									end
+								end
+							end
+						end
+
 						-- Show mover frame
 						SideFrames:Show()
 						LeaPlusLC:HideFrames()
@@ -6021,6 +6048,7 @@
 		text:SetPoint("TOPLEFT", x, y)
 		text:SetText(L[title])
 		text:SetJustifyH"LEFT";
+		return text
 	end
 
 	-- Create a slider control (uses standard template)

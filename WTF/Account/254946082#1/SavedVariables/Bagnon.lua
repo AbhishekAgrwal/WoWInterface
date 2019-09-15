@@ -8,35 +8,15 @@ Bagnon_Sets = {
 	},
 	["refrigeColor"] = {
 	},
-	["displayBlizzard"] = false,
-	["displayPlayer"] = false,
+	["tipCount"] = true,
+	["fading"] = true,
 	["inscribeColor"] = {
 	},
 	["soulColor"] = {
 	},
-	["locked"] = true,
+	["displayBlizzard"] = false,
 	["glowQuest"] = true,
 	["quiverColor"] = {
-	},
-	["glowSets"] = true,
-	["reagentColor"] = {
-	},
-	["gemColor"] = {
-	},
-	["enchantColor"] = {
-	},
-	["glowAlpha"] = 0.49,
-	["emptySlots"] = true,
-	["glowNew"] = true,
-	["normalColor"] = {
-	},
-	["glowQuality"] = true,
-	["mineColor"] = {
-	},
-	["glowUnusable"] = false,
-	["herbColor"] = {
-	},
-	["profiles"] = {
 	},
 	["global"] = {
 		["inventory"] = {
@@ -82,29 +62,29 @@ Bagnon_Sets = {
 			["brokerObject"] = "Leatrix_Plus",
 			["options"] = false,
 			["money"] = true,
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-			},
+			["reverseBags"] = false,
 			["alpha"] = 1,
-			["hiddenRules"] = {
-				["misc"] = false,
-				["use"] = false,
-				["equip"] = false,
-				["trade/goods"] = false,
-				["equip/weapon"] = false,
-				["use/consume"] = false,
-				["contain"] = true,
-			},
+			["bagBreak"] = false,
 			["y"] = 111.000030517578,
 			["x"] = -4.0001220703125,
 			["search"] = false,
 			["broker"] = false,
 			["reverseSlots"] = false,
 			["itemScale"] = 0.92,
-			["bagBreak"] = false,
-			["reverseBags"] = false,
+			["hiddenRules"] = {
+				["misc"] = false,
+				["contain"] = true,
+				["trade/goods"] = false,
+				["equip"] = false,
+				["equip/weapon"] = false,
+				["use/consume"] = false,
+				["use"] = false,
+			},
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+			},
 		},
 		["vault"] = {
 			["rules"] = {
@@ -208,15 +188,35 @@ Bagnon_Sets = {
 			["x"] = -307.000244140625,
 			["search"] = false,
 			["broker"] = false,
-			["itemScale"] = 0.92,
-			["hiddenRules"] = {
-			},
+			["columns"] = 8,
 			["color"] = {
 			},
-			["columns"] = 8,
+			["hiddenRules"] = {
+			},
+			["itemScale"] = 0.92,
 		},
 	},
+	["reagentColor"] = {
+	},
+	["gemColor"] = {
+	},
+	["enchantColor"] = {
+	},
+	["glowAlpha"] = 0.49,
+	["emptySlots"] = true,
+	["glowNew"] = true,
+	["glowSets"] = true,
+	["glowQuality"] = true,
+	["mineColor"] = {
+	},
+	["profiles"] = {
+	},
+	["herbColor"] = {
+	},
+	["glowUnusable"] = false,
+	["normalColor"] = {
+	},
 	["colorSlots"] = true,
-	["tipCount"] = true,
-	["fading"] = true,
+	["locked"] = true,
+	["displayPlayer"] = false,
 }
