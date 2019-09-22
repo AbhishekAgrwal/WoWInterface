@@ -39,3 +39,5 @@ Leatrix_Plus: disabled
 Spy: disabled
 BrightleafNameplateClassColors: disabled
 AdvancedInterfaceOptions: enabled
+VanasKoS: disabled
+LoseControl: disabled

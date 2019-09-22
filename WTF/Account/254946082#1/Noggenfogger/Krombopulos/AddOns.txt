@@ -41,5 +41,7 @@ TinyTooltip: enabled
 Leatrix_Plus: enabled
 Atlas: enabled
 Atlas_ClassicWoW: enabled
-Spy: enabled
+Spy: disabled
 BrightleafNameplateClassColors: enabled
+VanasKoS: enabled
+LoseControl: enabled

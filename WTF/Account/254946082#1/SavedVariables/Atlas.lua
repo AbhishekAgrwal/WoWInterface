@@ -7,15 +7,16 @@ AtlasDB = {
 	["profiles"] = {
 		["Default"] = {
 			["dropdowns"] = {
-				["Instances"] = 4,
+				["Entrances"] = 6,
 				["Eastern Kingdoms Instances"] = 8,
+				["Instances"] = 12,
 			},
 			["options"] = {
 				["autoSelect"] = true,
 				["dropdowns"] = {
 					["module"] = 2,
 					["menuType"] = 5,
-					["zone"] = 3,
+					["zone"] = 12,
 				},
 				["frames"] = {
 					["lock"] = true,

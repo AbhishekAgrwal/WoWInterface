@@ -261,15 +261,15 @@ WeakAurasSaved = {
 				},
 			},
 			["glowFrequency"] = 0.25,
-			["glowLength"] = 10,
+			["glowLines"] = 8,
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 1,
 			["config"] = {
 			},
-			["authorOptions"] = {
-			},
-			["selfPoint"] = "CENTER",
+			["glowLength"] = 10,
+			["useglowColor"] = false,
 			["regionType"] = "icon",
+			["keepAspectRatio"] = false,
 			["actions"] = {
 				["start"] = {
 				},
@@ -280,9 +280,9 @@ WeakAurasSaved = {
 					["do_sound"] = false,
 				},
 			},
-			["glowLines"] = 8,
-			["keepAspectRatio"] = false,
-			["useglowColor"] = false,
+			["selfPoint"] = "CENTER",
+			["authorOptions"] = {
+			},
 			["anchorFrameType"] = "SCREEN",
 			["frameStrata"] = 1,
 			["zoom"] = 0,
@@ -896,12 +896,6 @@ WeakAurasSaved = {
 			["glowType"] = "buttonOverlay",
 			["glowThickness"] = 1,
 			["keepAspectRatio"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 			["triggers"] = {
 				{
 					["trigger"] = {
@@ -951,10 +945,24 @@ WeakAurasSaved = {
 				}, -- [2]
 				["activeTriggerMode"] = -10,
 			},
+			["load"] = {
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
 			["regionType"] = "icon",
 			["icon"] = true,
 			["glowLength"] = 10,
-			["xOffset"] = 6.1035156250e-05,
+			["url"] = "https://wago.io/bpPhvVO7Y/1",
 			["config"] = {
 			},
 			["alpha"] = 1,
@@ -979,23 +987,15 @@ WeakAurasSaved = {
 			},
 			["frameStrata"] = 1,
 			["glowYOffset"] = 0,
-			["url"] = "https://wago.io/bpPhvVO7Y/1",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["uid"] = "VoWoe3Nrqn1",
 			["inverse"] = false,
-			["load"] = {
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
+			["xOffset"] = 6.1035156250e-05,
 			["conditions"] = {
 			},
 			["anchorFrameType"] = "SCREEN",

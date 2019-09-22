@@ -217,10 +217,10 @@ BigTipDB = {
 					["enable"] = false,
 					["filter"] = "none",
 				},
-				["guildName"] = {
+				["className"] = {
 					["enable"] = true,
-					["color"] = "itemQuality",
-					["wildcard"] = "<%s>",
+					["color"] = "class",
+					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
 				["title"] = {
@@ -235,10 +235,10 @@ BigTipDB = {
 					["wildcard"] = "%s",
 					["filter"] = "none",
 				},
-				["className"] = {
+				["guildName"] = {
 					["enable"] = true,
-					["color"] = "class",
-					["wildcard"] = "%s",
+					["color"] = "itemQuality",
+					["wildcard"] = "<%s>",
 					["filter"] = "none",
 				},
 				["classIcon"] = {
@@ -249,7 +249,7 @@ BigTipDB = {
 			["showModel"] = false,
 			["showTargetBy"] = false,
 			["coloredBorder"] = "default",
-			["showTarget"] = false,
+			["showTarget"] = true,
 			["background"] = {
 				["colorfunc"] = "default",
 				["alpha"] = "0.00",

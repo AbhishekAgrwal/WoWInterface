@@ -10,8 +10,15 @@ VER 3 0000000001000001 "Sinister Strike" "INV_MISC_QUESTIONMARK"
 /startattack
 END
 VER 3 0000000001000002 "spam" "132090"
-/target Khan
-/cast Gouge
-/cast Sinister Strike
-/startattack
+#showtooltip()
+/target [@target:nodead] Giant
+/cast Throw
+END
+VER 3 0000000001000004 "Stealth" "INV_MISC_QUESTIONMARK"
+#showtooltip() Stealth
+/cast Stealth
+END
+VER 3 0000000001000005 "THROW" "INV_MISC_QUESTIONMARK"
+#showtooltip()
+/cast Throw
 END

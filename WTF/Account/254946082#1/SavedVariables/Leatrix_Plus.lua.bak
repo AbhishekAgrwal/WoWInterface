@@ -55,7 +55,7 @@ LeaPlusDB = {
 	["LeaPlusMailFontSize"] = 15,
 	["InviteFromWhisper"] = "Off",
 	["MinimapScale"] = 1,
-	["StandAndDismount"] = "Off",
+	["StandAndDismount"] = "On",
 	["NoFriendRequests"] = "Off",
 	["AutoReleasePvP"] = "Off",
 	["DurabilityStatus"] = "Off",
@@ -129,7 +129,7 @@ LeaPlusDB = {
 	["FasterMovieSkip"] = "Off",
 	["MainPanelR"] = "CENTER",
 	["MaxCameraZoom"] = "Off",
-	["LeaStartPage"] = 6,
+	["LeaStartPage"] = 7,
 	["PlusPanelAlpha"] = 0,
 	["TooltipAnchorMenu"] = 1,
 }
