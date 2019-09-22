@@ -1,0 +1,29 @@
+VER 3 0000000001000007 "Poison" "INV_MISC_QUESTIONMARK"
+/use [nomod] Instant Poison IV; [mod:shift] Crippling Poison; [mod:ctrl] Mind-Numbing Poison; [mod:alt] Wound Poison
+/use [btn: 1] 16; [btn:2] 17
+/click StaticPopup1Button1
+END
+VER 3 0000000001000003 "PP" "INV_MISC_QUESTIONMARK"
+#Showtooltip()
+/cast Pick Pocket
+/cast Sinister Strike
+END
+VER 3 0000000001000006 "Sap" "INV_MISC_QUESTIONMARK"
+#Showtooltip()
+/cleartarget [help][dead]
+/targetenemyplayer
+/cast Sap
+END
+VER 3 0000000001000001 "Sinister Strike" "INV_MISC_QUESTIONMARK"
+#showtooltip() Sinister Strike
+/cast Riposte
+/cast Sinister Strike
+/run UIErrorsFrame:Clear()
+/startattack
+END
+VER 3 0000000001000005 "THROW" "INV_MISC_QUESTIONMARK"
+#showtooltip()
+/cast [equipped:Thrown] Throw; [equipped:Guns] Shoot Gun; [equipped:Bows] Shoot Bow; [equipped:Crossbows] Shoot Crossbow
+/cast Eviscerate
+/run UIErrorsFrame:Clear()
+END

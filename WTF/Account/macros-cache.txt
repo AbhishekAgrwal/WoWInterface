@@ -1,0 +1,16 @@
+VER 3 0000000000000003 "BUFF" "136147"
+/s pls can u buff me
+END
+VER 3 0000000000000001 "HELP" "136140"
+/s hELP
+END
+VER 3 0000000000000005 "Ins" "132212"
+/targetfriendplayer [noexists][harm][dead]
+/ins
+END
+VER 3 0000000000000002 "INV" "135818"
+/s inv pls
+END
+VER 3 0000000000000004 "THANKS" "136208"
+/s thanks :)
+END
