@@ -16,7 +16,7 @@ AtlasDB = {
 				["dropdowns"] = {
 					["module"] = 2,
 					["menuType"] = 5,
-					["zone"] = 12,
+					["zone"] = 2,
 				},
 				["frames"] = {
 					["lock"] = true,

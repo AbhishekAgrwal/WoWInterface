@@ -1,24 +1,40 @@
+VER 3 0000000001000008 "Garotte" "INV_MISC_QUESTIONMARK"
+#showtooltip() Garrote
+/cast Pick Pocket
+/cast Garrote
+END
+VER 3 0000000001000009 "P" "INV_MISC_QUESTIONMARK"
+#showtooltip Pick Pocket
+/targetenemy
+/cast Pick Pocket
+/run UIErrorsFrame:Clear()
+END
+VER 3 0000000001000007 "Poison" "INV_MISC_QUESTIONMARK"
+/use [nomod] Instant Poison V; [mod:shift] Crippling Poison II; [mod:ctrl] Mind-Numbing Poison; [mod:alt] Wound Poison
+/use [btn: 1] 16; [btn:2] 17
+/click StaticPopup1Button1
+END
 VER 3 0000000001000003 "PP" "INV_MISC_QUESTIONMARK"
-#Showtooltip()
+#showtooltip() Sinister Strike
 /cast Pick Pocket
 /cast Sinister Strike
+END
+VER 3 0000000001000006 "Sap" "INV_MISC_QUESTIONMARK"
+#Showtooltip()
+/cleartarget [help][dead]
+/targetenemyplayer
+/cast Sap
 END
 VER 3 0000000001000001 "Sinister Strike" "INV_MISC_QUESTIONMARK"
 #showtooltip() Sinister Strike
 /cast Riposte
 /cast Sinister Strike
+/run UIErrorsFrame:Clear()
 /startattack
-END
-VER 3 0000000001000002 "spam" "132090"
-#showtooltip()
-/target [@target:nodead] Giant
-/cast Throw
-END
-VER 3 0000000001000004 "Stealth" "INV_MISC_QUESTIONMARK"
-#showtooltip() Stealth
-/cast Stealth
 END
 VER 3 0000000001000005 "THROW" "INV_MISC_QUESTIONMARK"
 #showtooltip()
-/cast Throw
+/cast [equipped:Thrown] Throw; [equipped:Guns] Shoot Gun; [equipped:Bows] Shoot Bow; [equipped:Crossbows] Shoot Crossbow
+/cast Eviscerate
+/run UIErrorsFrame:Clear()
 END

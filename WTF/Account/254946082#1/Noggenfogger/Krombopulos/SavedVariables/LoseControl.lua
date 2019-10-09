@@ -13,11 +13,11 @@ LoseControlDB = {
 			["alpha"] = 0.75,
 			["size"] = 44,
 		},
-		["target"] = {
+		["party3"] = {
 			["anchor"] = "Blizzard",
-			["enabled"] = false,
+			["enabled"] = true,
 			["alpha"] = 1,
-			["size"] = 56,
+			["size"] = 36,
 		},
 		["party4"] = {
 			["anchor"] = "Blizzard",
@@ -25,13 +25,13 @@ LoseControlDB = {
 			["alpha"] = 1,
 			["size"] = 36,
 		},
-		["party3"] = {
+		["target"] = {
 			["anchor"] = "Blizzard",
-			["enabled"] = true,
+			["enabled"] = false,
 			["alpha"] = 1,
-			["size"] = 36,
+			["size"] = 56,
 		},
-		["party1"] = {
+		["party2"] = {
 			["anchor"] = "Blizzard",
 			["enabled"] = true,
 			["alpha"] = 1,
@@ -43,7 +43,7 @@ LoseControlDB = {
 			["alpha"] = 1,
 			["size"] = 36,
 		},
-		["party2"] = {
+		["party1"] = {
 			["anchor"] = "Blizzard",
 			["enabled"] = true,
 			["alpha"] = 1,
@@ -52,6 +52,8 @@ LoseControlDB = {
 	},
 	["disablePartyInBG"] = false,
 	["version"] = 1,
+	["noGetExtraAuraDurationInformation"] = false,
+	["disablePlayerInterrupts"] = true,
 	["priority"] = {
 		["Other"] = 0,
 		["CC"] = 60,
@@ -65,8 +67,6 @@ LoseControlDB = {
 		["Root"] = 0,
 		["Disarm"] = 30,
 	},
-	["disablePlayerInterrupts"] = true,
-	["noGetExtraAuraDurationInformation"] = false,
 	["disablePartyInRaid"] = true,
 	["noBlizzardCooldownCount"] = true,
 }

@@ -1,7 +1,6 @@
 SET deselectOnClick "1"
 SET lootUnderMouse "1"
 SET showTargetOfTarget "1"
-SET SpellQueueWindow "218"
 SET countdownForCooldowns "1"
 SET instantQuestText "1"
 SET flaggedTutorials "v##M##$##&##'##(##)##*##+##6##,##.##:##;##8##7##?##@"

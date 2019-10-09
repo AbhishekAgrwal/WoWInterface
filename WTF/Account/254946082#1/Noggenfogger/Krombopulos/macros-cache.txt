@@ -1,10 +1,21 @@
+VER 3 0000000001000008 "Garotte" "INV_MISC_QUESTIONMARK"
+#showtooltip() Garrote
+/cast Pick Pocket
+/cast Garrote
+END
+VER 3 0000000001000009 "P" "INV_MISC_QUESTIONMARK"
+#showtooltip Pick Pocket
+/targetenemy
+/cast [nomounted] Pick Pocket
+/run UIErrorsFrame:Clear()
+END
 VER 3 0000000001000007 "Poison" "INV_MISC_QUESTIONMARK"
-/use [nomod] Instant Poison IV; [mod:shift] Crippling Poison; [mod:ctrl] Mind-Numbing Poison; [mod:alt] Wound Poison
+/use [nomod] Instant Poison V; [mod:shift] Crippling Poison II; [mod:ctrl] Mind-Numbing Poison; [mod:alt] Wound Poison
 /use [btn: 1] 16; [btn:2] 17
 /click StaticPopup1Button1
 END
 VER 3 0000000001000003 "PP" "INV_MISC_QUESTIONMARK"
-#Showtooltip()
+#showtooltip() Sinister Strike
 /cast Pick Pocket
 /cast Sinister Strike
 END
